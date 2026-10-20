@@ -1,0 +1,446 @@
+@charset "UTF-8";
+/* =========================================================
+   輪大会2026 — モダン／シック（ロゴのミントグリーンに調和）
+   ========================================================= */
+:root{
+  --bg:        #F4F2EC;   /* 生成り（ロゴ白地になじむ暖白）*/
+  --bg-2:      #EAE7DD;
+  --card:      #FCFBF7;
+  --ink:       #232220;   /* ロゴの黒文字に合わせた墨色 */
+  --ink-soft:  #847F74;
+  --line:      #DCD8CC;
+  --accent:    #70C3B3;   /* ロゴのミントグリーン */
+  --accent-d:  #2F7D6C;   /* 文字・濃色用 */
+  --accent-sf: #C9E6DF;   /* 淡色 */
+
+  --maxw: 1080px;
+  --pad: clamp(22px, 5vw, 76px);
+
+  --kaku: "Zen Kaku Gothic New", system-ui, sans-serif;
+  --mono: "DM Mono", ui-monospace, monospace;
+}
+
+*{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; }
+body{
+  font-family:var(--kaku); font-weight:400;
+  background:var(--bg); color:var(--ink);
+  line-height:2.05; letter-spacing:.04em;
+  -webkit-font-smoothing:antialiased;
+}
+a{ color:inherit; text-decoration:none; }
+.container{ max-width:var(--maxw); margin:0 auto; padding-inline:var(--pad); }
+.label{ font-family:var(--mono); font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--ink-soft); }
+
+/* ===================== Header ===================== */
+header{ position:fixed; inset:0 0 auto 0; z-index:100;
+  background:color-mix(in srgb, var(--bg) 85%, transparent); backdrop-filter:blur(8px);
+  border-bottom:1px solid transparent; transition:border-color .3s; }
+header.scrolled{ border-bottom-color:var(--line); }
+.nav{ display:flex; align-items:center; justify-content:space-between; height:78px; }
+.brand{ display:flex; align-items:center; gap:13px; }
+.brand .mark{ width:40px; height:40px; flex:none; border-radius:50%; object-fit:contain; display:block; }
+.brand .txt{ line-height:1.1; }
+.brand .txt .ja{ font-weight:500; font-size:17px; letter-spacing:.14em; }
+.brand .txt .en{ font-family:var(--mono); font-size:9.5px; letter-spacing:.24em; color:var(--ink-soft); text-transform:uppercase; }
+
+.nav-links{ position:fixed; inset:78px 0 auto 0; flex-direction:column; align-items:stretch; gap:0;
+  background:var(--bg); border-bottom:1px solid var(--line); padding:8px var(--pad) 28px;
+  transform:translateY(-120%); transition:transform .4s ease, visibility 0s .4s;
+  visibility:hidden; }
+.nav-links.open{ transform:none; visibility:visible; transition:transform .4s ease, visibility 0s; }
+.nav-links a{ padding:18px 0; border-bottom:1px solid var(--line); font-size:15px; opacity:1; display:flex; align-items:center; }
+.nav-links .entry{ border-bottom:1px solid var(--line); }
+.nav-links a{ font-size:13px; font-weight:400; letter-spacing:.08em; color:var(--ink); opacity:.78; transition:opacity .25s; }
+.nav-links a:hover, .nav-links a.active{ opacity:1; }
+.nav-links .entry{ font-family:var(--mono); font-size:12px; letter-spacing:.12em; padding-bottom:3px; border-bottom:1px solid var(--accent-d); color:var(--accent-d); opacity:1; }
+
+.burger{ display:flex; flex-direction:column; gap:6px; background:none; border:none; cursor:pointer; padding:8px; }
+.burger span{ width:24px; height:1px; background:var(--ink); transition:.3s; }
+.burger.open span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+.burger.open span:nth-child(2){ opacity:0; }
+.burger.open span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+
+/* ===================== Hero ===================== */
+.hero{ position:relative; min-height:100svh; display:flex; align-items:center; padding-top:78px; overflow:hidden; }
+.hero .container{ position:relative; z-index:2; width:100%; }
+.hero .eyebrow{ margin-bottom:26px; text-align:center; opacity:0; animation:fade .9s .1s forwards; }
+.hero-logo{ display:flex; justify-content:center; align-items:flex-end; gap:clamp(14px,3vw,32px); margin-bottom:18px; opacity:0; animation:fade 1s .25s forwards; }
+.hero-logo img{ width:clamp(220px,40vw,430px); height:auto; display:block; }
+.hero-logo .yr{ font-family:var(--mono); font-weight:400; font-size:clamp(22px,4.4vw,46px); letter-spacing:.1em; color:var(--accent-d); padding-bottom:.55em; }
+.hero .catch{ font-size:clamp(15px,2.4vw,19px); font-weight:400; letter-spacing:.18em; color:var(--ink-soft); text-align:center; opacity:0; animation:fade .9s .4s forwards; }
+.hero .catch .hl{ color:var(--accent-d); }
+.hero-cta{ display:flex; justify-content:center; margin:8px 0 32px; opacity:0; animation:fade .9s .5s forwards; }
+
+.hero-meta{ margin:42px auto 48px; max-width:520px; opacity:0; animation:fade 1s .5s forwards; }
+.hero-meta .row{ display:flex; align-items:center; gap:28px; padding:18px 0; border-top:1px solid var(--line); }
+.hero-meta .row:last-child{ border-bottom:1px solid var(--line); }
+.hero-meta .k{ width:84px; flex:none; font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-soft); text-align:right; transform:translateY(2px); }
+.hero-meta .v{ font-size:clamp(16px,2.2vw,19px); font-weight:500; letter-spacing:.06em; }
+.hero-meta .v small{ font-weight:400; color:var(--ink-soft); font-size:.8em; }
+
+.quick{ display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--line); opacity:0; animation:fade 1s .65s forwards; }
+.quick a{ display:flex; align-items:center; gap:14px; padding:20px 4px; border-bottom:1px solid var(--line); font-size:14px; letter-spacing:.06em; transition:color .25s; }
+.quick a:not(:nth-child(3n)){ border-right:1px solid var(--line); padding-right:18px; }
+.quick a:nth-child(3n-1), .quick a:nth-child(3n){ padding-left:24px; }
+.quick a .n{ font-family:var(--mono); font-size:10px; color:var(--accent-d); letter-spacing:.1em; }
+.quick a:hover{ color:var(--accent-d); }
+
+.ring-bg{ position:absolute; z-index:1; border:1px solid var(--accent-sf); border-radius:50%;
+  width:min(58vw,600px); aspect-ratio:1; right:-12%; top:50%; transform:translateY(-50%); pointer-events:none; }
+.scrollcue{ position:absolute; left:var(--pad); bottom:30px; z-index:2; font-family:var(--mono); font-size:10px; letter-spacing:.26em; text-transform:uppercase; color:var(--ink-soft); }
+
+/* ===================== Section 共通 ===================== */
+section{ padding:clamp(72px,11vw,148px) 0; }
+.alt{ background:var(--bg-2); }
+.sec-head{ margin-bottom:clamp(40px,6vw,68px); }
+.sec-head .idx{ font-family:var(--mono); font-size:12px; letter-spacing:.2em; color:var(--accent-d); display:block; margin-bottom:16px; }
+.sec-head h2{ font-weight:500; font-size:clamp(26px,4.2vw,42px); letter-spacing:.1em; }
+
+.dtable{ border-top:1px solid var(--line); }
+.dtable .tr{ display:flex; gap:32px; padding:24px 4px; border-bottom:1px solid var(--line); }
+.dtable .th{ width:128px; flex:none; font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-soft); padding-top:5px; }
+.dtable .td{ font-size:16px; font-weight:500; letter-spacing:.04em; }
+.dtable .td small{ display:block; font-weight:400; color:var(--ink-soft); font-size:14px; margin-top:6px; }
+
+.about p{ font-size:clamp(16px,2.2vw,19px); font-weight:400; max-width:60ch; letter-spacing:.05em; }
+.about p+p{ margin-top:24px; }
+.about .big{ font-size:clamp(18px,2.6vw,24px); font-weight:500; letter-spacing:.08em; line-height:1.7; margin-bottom:36px; }
+.about .hl{ color:var(--accent-d); }
+
+.ctas{ display:flex; flex-wrap:wrap; justify-content:center; gap:16px; margin-top:40px; }
+.cta{ display:inline-flex; align-items:center; justify-content:center; gap:14px;
+  width:300px; max-width:100%; padding:20px 34px; font-size:15px; letter-spacing:.08em;
+  background:var(--accent-d); color:#fff; transition:background .3s, color .3s, transform .3s; }
+.cta:hover{ background:#26685a; transform:translateY(-2px); }
+.cta .ar{ font-family:var(--mono); }
+
+.lead{ font-size:clamp(16px,2.2vw,19px); max-width:60ch; letter-spacing:.05em; }
+.lead .hl{ color:var(--accent-d); }
+.note{ color:var(--ink-soft); font-size:.86em; letter-spacing:.04em; }
+.note.strong{ color:#5A554C; font-weight:700; }
+
+/* ===================== Footer ===================== */
+footer{ padding:clamp(64px,9vw,104px) 0 48px; border-top:1px solid var(--line); text-align:center; }
+.foot-name{ font-weight:500; font-size:clamp(24px,4vw,34px); letter-spacing:.12em; }
+.foot-sub{ font-family:var(--mono); font-size:12px; letter-spacing:.12em; color:var(--ink-soft); margin-top:12px; }
+.foot-links{ display:flex; flex-wrap:wrap; justify-content:center; gap:16px 28px; margin:40px 0 36px; }
+.foot-links a{ font-size:13px; letter-spacing:.06em; color:var(--ink); opacity:.78; transition:opacity .25s; }
+.foot-links a:hover{ opacity:1; color:var(--accent-d); }
+.copy{ font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; color:var(--ink-soft); }
+
+.reveal{ opacity:0; transform:translateY(20px); transition:opacity .9s ease, transform .9s ease; }
+.reveal.in{ opacity:1; transform:none; }
+@keyframes fade{ from{opacity:0; transform:translateY(20px);} to{opacity:1; transform:none;} }
+
+/* PC幅で本文を広げる */
+@media (min-width:861px){
+  .about p,
+  .about .big,
+  .lead{ max-width:none; }
+}
+/* ===================== Responsive ===================== */
+@media (max-width:860px){
+  .quick{ grid-template-columns:1fr; }
+  .quick a, .quick a:not(:nth-child(3n)){ border-right:none; padding-left:4px !important; padding-right:4px; }
+  .hero-logo{ flex-direction:column; align-items:center; gap:6px; }
+  .hero-logo .yr{ padding-bottom:0; }
+  .ring-bg{ right:-30%; opacity:.7; }
+}
+@media (max-width:480px){
+  .quick{ display:none; }
+  .hero-cta{ margin-bottom:0; }
+  .hero{ min-height:auto; padding-bottom:48px; }   /* 画面高さ固定をやめる */
+  .dtable .tr{ flex-direction:column; gap:6px; }
+  .dtable .th{ width:auto; padding-top:0; }
+}
+@charset "UTF-8";
+/* =========================================================
+   輪大会2026 — 個別ページ用 追記分（rule.html ほかで使用）
+   ※ 既存 style.css の :root 変数・クラスを流用。
+   ※ 既存セレクタは一切上書きしない（新規クラスのみ追加）。
+   ※ この内容を style.css の末尾にそのまま追記してください。
+   ========================================================= */
+
+/* ---------- 個別ページ：ページヒーロー ---------- */
+.page-hero{
+  position:relative; overflow:hidden; text-align:center;
+  padding:calc(78px + clamp(48px,9vw,92px)) 0 clamp(40px,7vw,72px);
+  border-bottom:1px solid var(--line);
+}
+.page-hero .ring-bg{        /* 既存 .ring-bg を中央寄せで再利用 */
+  left:50%; right:auto; top:44%; transform:translate(-50%,-50%);
+  width:min(72vw,520px); opacity:.6;
+}
+.page-hero .ph-inner{ position:relative; z-index:2; }
+.ph-kicker{ font-family:var(--mono); font-size:11px; letter-spacing:.32em; text-transform:uppercase; color:var(--accent-d); }
+.ph-title{ font-weight:500; font-size:clamp(28px,5.4vw,46px); letter-spacing:.12em; margin:16px 0 14px; }
+.ph-brand{ font-family:var(--mono); font-size:12px; letter-spacing:.18em; color:var(--ink-soft); }
+
+/* ---------- パンくず ---------- */
+.crumb{ font-family:var(--mono); font-size:11px; letter-spacing:.1em; color:var(--ink-soft); padding-top:26px; }
+.crumb a{ color:var(--ink-soft); transition:color .25s; }
+.crumb a:hover{ color:var(--accent-d); }
+.crumb .sep{ margin:0 10px; color:var(--line); }
+.crumb .cur{ color:var(--ink); }
+
+/* ---------- 部門カード ---------- */
+.div-grid{ display:grid; grid-template-columns:1fr; gap:16px; }
+.div-card{
+  position:relative; background:var(--card); border:1px solid var(--line);
+  padding:10px 26px 24px; transition:border-color .3s, transform .3s;
+}
+.div-card:hover{ border-color:var(--accent); transform:translateY(-3px); }
+.div-card .dnum{ font-family:var(--mono); font-size:11px; letter-spacing:.2em; color:var(--accent-d); }
+.div-card .dname{ font-size:20px; font-weight:500; letter-spacing:.08em; margin:10px 0 18px; }
+.div-card .dname small{ font-weight:400; color:var(--ink-soft); font-size:13px; margin-left:8px; }
+.div-card .dmeta{ display:flex; flex-direction:column; gap:11px; }
+.div-card .mrow{ display:flex; gap:14px; font-size:14px; line-height:1.7; }
+.div-card .mk{ flex:none; width:64px; font-family:var(--mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-soft); padding-top:4px; }
+.div-card .mv{ letter-spacing:.04em; }
+.div-card .mv strong{ color:var(--accent-d); font-weight:700; }
+
+/* ---------- ルール用リスト ---------- */
+.rlist{ list-style:none; border-top:1px solid var(--line); }
+.rlist > li{ position:relative; padding:18px 4px 18px 30px; border-bottom:1px solid var(--line); font-size:15px; letter-spacing:.04em; }
+/* ◯は1行目テキストの中心に合わせる：padding-top(18px) + 半行(line-height 2.05 ÷ 2 ≒ 1.025em) を中心に置き、translateYで自身の高さ分を補正 */
+.rlist > li::before{ content:""; position:absolute; left:6px; top:calc(18px + 1.025em); transform:translateY(-50%); width:7px; height:7px; border:1px solid var(--accent-d); border-radius:50%; }
+.rlist .sub{ display:block; margin-top:10px; padding-left:2px; color:var(--ink-soft); font-size:14px; line-height:1.9; }
+
+/* ---------- 注記 / TBD ボックス ---------- */
+.callout{ background:var(--card); border:1px solid var(--line); border-left:3px solid var(--accent); padding:20px 22px; font-size:14px; color:var(--ink-soft); letter-spacing:.04em; line-height:1.9; }
+
+/* ---------- サブ見出し＋説明文 ---------- */
+.subh{ font-size:18px; font-weight:500; letter-spacing:.08em; margin:38px 0 14px; padding-left:14px; border-left:2px solid var(--accent-d); line-height:1.5; }
+.subh .tag{ font-family:var(--mono); font-size:11px; color:var(--ink-soft); letter-spacing:.1em; margin-left:10px; }
+.prose p{ font-size:15px; letter-spacing:.04em; }  /* 幅は下部で全幅指定 */
+.prose p + p{ margin-top:14px; }
+
+/* ---------- 配点（シンプルな表：審査項目／配点） ---------- */
+/* 表として明確に：外枠で囲み、ヘッダー行に帯、列間に縦罫線を入れて本文の区切り線と区別する */
+.score-table{ width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--line); margin:16px 0 6px; }
+.score-table th, .score-table td{ padding:14px 18px; border-bottom:1px solid var(--line); font-weight:400; vertical-align:baseline; text-align:left; }
+.score-table th:last-child, .score-table td:last-child{ text-align:right; }
+.score-table th:first-child, .score-table td:first-child{ border-right:1px solid var(--line); }
+.score-table thead th{ background:var(--bg-2); font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-soft); }
+.score-table tbody th{ font-size:15px; letter-spacing:.06em; }
+.score-table tbody td{ font-family:var(--mono); font-size:18px; letter-spacing:.02em; color:var(--accent-d); white-space:nowrap; }
+.score-table tbody td small{ font-size:11px; color:var(--ink-soft); margin-left:2px; }
+.score-table tbody .total th, .score-table tbody .total td{ background:var(--bg-2); font-weight:700; }
+.score-table tbody .total th{ color:var(--ink); }
+.score-table tr:last-child th, .score-table tr:last-child td{ border-bottom:none; }
+
+/* ---------- その他のページ（関連リンク） ---------- */
+.related{ border-top:1px solid var(--line); padding-top:clamp(40px,6vw,64px); }
+.rel-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-top:28px; }
+.rel-btn{ display:flex; flex-direction:column; gap:7px; padding:24px 18px; border:1px solid var(--line); background:var(--card); transition:border-color .3s, transform .3s; }
+.rel-btn:hover{ border-color:var(--accent); transform:translateY(-3px); }
+.rel-sub{ font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--accent-d); }
+.rel-label{ font-size:15px; font-weight:500; letter-spacing:.06em; }
+.home-link{ display:inline-block; margin-top:36px; font-family:var(--mono); font-size:12px; letter-spacing:.1em; color:var(--ink-soft); transition:color .25s; }
+.home-link:hover{ color:var(--accent-d); }
+
+/* ---------- 本文テキストの幅（全セクションを全幅に統一） ---------- */
+/* 既存 style.css は本文に max-width(60ch/62ch) を設定し ≥861px で解除していたが、
+   半画面ウィンドウ等の 861px 未満のPC表示では幅が揃わないため、
+   本文ブロックは常に container 全幅とする。
+   ※スマホ・タブレットでは container 自体が狭く、この上限は元々表示に影響しない
+     （＝従来どおりの見た目／レスポンシブは崩れない）。 */
+.lead,
+.prose p{ max-width:none; }
+
+/* ---------- レスポンシブ（グリッド） ---------- */
+@media (min-width:760px){ .div-grid{ grid-template-columns:repeat(3,1fr); } }
+@media (max-width:480px){
+  .div-card .mrow{ flex-direction:column; gap:2px; }
+  .div-card .mk{ width:auto; padding-top:0; }
+}
+
+/* =========================================================
+   個別ページ追加分 その2（entry / access / sponsor / contact）
+   ※ いずれも新規クラス。既存セレクタは上書きしない。
+   ========================================================= */
+
+/* ---------- エントリー料 ---------- */
+.fee-grid{ border:1px solid var(--line); background:var(--card); }
+.fee-item{ display:flex; align-items:center; justify-content:space-between; gap:20px; padding:20px 24px; border-bottom:1px solid var(--line); }
+.fee-item:last-child{ border-bottom:none; }
+.fee-div{ font-size:16px; font-weight:500; letter-spacing:.06em; }
+.fee-div small{ display:block; font-weight:400; font-size:12px; color:var(--ink-soft); margin-top:2px; }
+.fee-price{ flex:none; font-family:var(--mono); font-size:24px; letter-spacing:.02em; color:var(--accent-d); }
+
+/* ---------- CTA：無効状態 / サブラベル付き / 中央ラベル ---------- */
+.cta.is-disabled{ background:var(--line); color:#5A554B; pointer-events:none; cursor:default; transform:none; }
+.cta.is-disabled:hover{ background:var(--line); color:#5A554B; transform:none; }
+.cta.stack{ flex-direction:column; gap:6px; width:auto; min-width:280px; padding:18px 32px; }
+.cta .cta-sub{ font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; opacity:.82; }
+.cta-label{ text-align:center; font-family:var(--mono); font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--accent-d); margin:34px 0 4px; }
+
+/* ---------- 地図 ---------- */
+.map-embed{ position:relative; width:100%; aspect-ratio:16/10; border:1px solid var(--line); background:var(--card); overflow:hidden; margin-top:8px; }
+.map-embed iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
+.map-link{ display:inline-flex; align-items:center; gap:12px; margin-top:14px; padding:16px 22px; border:1px solid var(--line); background:var(--card); font-size:14px; letter-spacing:.06em; transition:border-color .3s, transform .3s; }
+.map-link:hover{ border-color:var(--accent); transform:translateY(-2px); }
+.map-link .ext{ font-family:var(--mono); font-size:11px; color:var(--accent-d); }
+
+/* ---------- ご協賛：プラン画像 ---------- */
+.plan-img{ margin:24px 0 8px; border:1px solid var(--line); background:var(--card); overflow:hidden; }
+.plan-img img{ display:block; width:100%; height:auto; }
+.plan-img.placeholder{ aspect-ratio:16/9; display:flex; align-items:center; justify-content:center; color:var(--ink-soft); font-size:13px; letter-spacing:.08em; }
+
+/* ---------- ご協賛：スポンサー一覧 ---------- */
+.sponsor-list{ display:grid; grid-template-columns:1fr; gap:24px; margin-top:8px; }
+.sponsor-item{ background:var(--card); border:1px solid var(--line); padding:28px 24px;
+  display:flex; flex-direction:column; align-items:center; text-align:center; gap:16px; }
+.sponsor-logo-wrap{ display:flex; align-items:center; justify-content:center; height:200px; }
+.sponsor-logo{ max-width:200px; max-height:200px; object-fit:contain; }
+/* 画像未設定時のプレースホルダ枠（実画像 <img class="sponsor-logo"> を入れたらこの枠は削除） */
+.sponsor-logo.placeholder{ width:200px; height:200px; border:1px solid var(--line); background:var(--bg);
+  display:flex; align-items:center; justify-content:center; font-size:11px; letter-spacing:.08em; color:var(--ink-soft); }
+.sponsor-info{ flex:1; }
+.sponsor-name{ font-size:18px; font-weight:500; letter-spacing:.06em; color:var(--ink); margin-bottom:10px; }
+.sponsor-desc{ font-size:14px; color:var(--ink-soft); letter-spacing:.04em; line-height:1.9; }
+
+/* 600px以上で横並び（左: ロゴ200px / 右: テキスト） */
+@media (min-width:600px){
+  .sponsor-item{ flex-direction:row; align-items:flex-start; text-align:left; gap:28px; }
+  .sponsor-logo-wrap{ flex-shrink:0; width:200px; height:200px; }
+}
+
+/* ---------- ご協賛：カンパ者名簿（テキストで「／」区切り） ---------- */
+.name-list{ margin-top:32px; border-top:1px solid var(--line); padding-top:26px; text-align:center; }
+.name-list-label{ font-family:var(--mono); font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--accent-d); margin-bottom:16px; }
+.name-items{ list-style:none; display:flex; flex-wrap:wrap; justify-content:center; gap:0; }
+.name-items li{ font-size:15px; letter-spacing:.04em; color:var(--ink); }
+.name-items li + li::before{ content:"／"; margin:0 12px; color:var(--accent-d); opacity:.5; }
+
+/* ---------- お問い合わせ ---------- */
+.contact-box{ background:var(--card); border:1px solid var(--line); padding:clamp(28px,5vw,44px); text-align:center; }
+.contact-box p{ font-size:15px; letter-spacing:.04em; }
+.contact-email{ display:block; font-family:var(--mono); font-size:clamp(15px,2.4vw,19px); letter-spacing:.06em; color:var(--accent-d); margin:16px 0; word-break:break-all; }
+.contact-box .ctas{ margin-top:20px; }
+
+/* ---------- レスポンシブ（その2） ---------- */
+@media (max-width:560px){
+  .fee-item{ padding:18px 18px; }
+  .fee-price{ font-size:21px; }
+}
+
+/* ---------- セクション見出しのリング（◯）マーク ---------- */
+/* 「リング」を表す輪を見出しの前に表示。色は他の緑アクセントと同じ var(--accent-d)。
+   ※全ページ共通の .sec-head h2 に付与（トップページの見出しにも適用されます）。
+   ※明るいロゴのミントにしたい場合は border-color を var(--accent) に変更。 */
+.sec-head h2{ display:flex; align-items:center; }
+.sec-head h2::before{
+  content:""; flex:none;
+  width:.72em; height:.72em; margin-right:.44em;
+  border:2px solid var(--accent-d); border-radius:50%;
+}
+.callout ul{ list-style:none; }
+.callout ul li{ position:relative; padding-left:26px; color:var(--ink); font-size:15px; letter-spacing:.04em; }
+.callout ul li::before{ content:""; position:absolute; left:4px; top:.95em; transform:translateY(-50%);
+  width:7px; height:7px; border:1px solid var(--accent-d); border-radius:50%; }
+.callout ul li + li{ margin-top:12px; }
+
+/* =========================================================
+   個別ページ追加分 その3（rule.html：審査員）
+   ※ 新規クラスのみ。既存セレクタは上書きしない。
+   ========================================================= */
+
+/* ---------- 審査員：紹介画像グリッド（画像は 1200×675 / 16:9） ---------- */
+.judge-grid{ display:grid; grid-template-columns:1fr; gap:16px; }
+.judge-card{
+  background:var(--card); border:1px solid var(--line); overflow:hidden;
+}
+.judge-card a{ display:block; }
+.judge-card img{ display:block; width:100%; height:auto; aspect-ratio:16/9; object-fit:cover; }
+
+/* 760px以上で2列（2×2） */
+@media (min-width:760px){
+  .judge-grid{ grid-template-columns:repeat(2,1fr); }
+}
+
+/* ---------- 画像拡大表示（ライトボックス） ---------- */
+.judge-card a{ cursor:zoom-in; }
+.lightbox{
+  position:fixed; inset:0; z-index:200;
+  display:flex; align-items:center; justify-content:center; padding:20px;
+  background:color-mix(in srgb, var(--ink) 88%, transparent);
+  backdrop-filter:blur(4px);
+  opacity:0; visibility:hidden; cursor:zoom-out;
+  transition:opacity .3s ease, visibility 0s .3s;
+}
+.lightbox.open{ opacity:1; visibility:visible; transition:opacity .3s ease, visibility 0s; }
+.lightbox img{ display:block; width:auto; height:auto; max-width:min(1200px,94vw); max-height:86vh; }
+.lightbox-hint{
+  position:absolute; left:0; right:0; bottom:26px; text-align:center;
+  font-family:var(--mono); font-size:11px; letter-spacing:.2em; text-transform:uppercase;
+  color:rgba(255,255,255,.72);
+}
+body.no-scroll{ overflow:hidden; }
+
+/* =========================================================
+   個別ページ追加分 その4（schedule.html：タイムスケジュール）
+   ※ 新規クラスのみ。既存セレクタは上書きしない。
+   ========================================================= */
+
+/* ---------- 外枠（カード）＋ 日付帯 ---------- */
+.sched-card{ background:var(--card); border:1px solid var(--line); }
+.sched-head{ display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:2px 20px;
+  padding:14px clamp(18px,4vw,32px); background:var(--bg-2); border-bottom:1px solid var(--line); }
+.sched-date{ font-size:16px; font-weight:500; letter-spacing:.06em; }
+.sched-date small{ font-weight:400; font-size:.8em; color:var(--ink-soft); }
+.sched-place{ font-size:13px; letter-spacing:.06em; color:var(--ink-soft); }
+
+/* ---------- タイムライン（時刻 ｜ ◯ ｜ 内容） ---------- */
+/* ◯は1行目の中心に置く：行の高さ(--sc-lh)と◯の直径(--sc-dot)から位置を計算。
+   縦線は◯と◯のあいだだけに引く（◯との間に --sc-gap の隙間）。
+   行どうしの間隔(--sc-row-gap)は時刻側・内容側の両方に付ける（終了時刻が次の行の開始時刻に近づきすぎないように）。 */
+.sched-list{ --sc-lh:28px; --sc-dot:13px; --sc-gap:5px; --sc-row-gap:26px;
+  list-style:none; padding:clamp(26px,4vw,40px) clamp(18px,4vw,32px); }
+.sched-list > li{ display:grid; grid-template-columns:62px 1fr; column-gap:clamp(12px,2.4vw,22px); }
+.sched-time{ font-family:var(--mono); font-size:17px; line-height:var(--sc-lh); letter-spacing:.04em;
+  color:var(--accent-d); text-align:right; white-space:nowrap; padding-bottom:var(--sc-row-gap); }
+/* 終了時刻（<span class="sched-end">）は開始時刻の下に小さく。「〜」は自動で付く */
+.sched-end{ display:block; font-size:13px; line-height:20px; color:var(--ink-soft); }
+.sched-end::before{ content:"〜"; font-family:var(--kaku); }
+.sched-body{ position:relative; padding:0 0 var(--sc-row-gap) 32px; }
+.sched-body::before{   /* 縦線（次の◯まで） */
+  content:""; position:absolute; left:calc((var(--sc-dot) - 1px) / 2); width:1px; background:var(--accent-sf);
+  top:calc((var(--sc-lh) + var(--sc-dot)) / 2 + var(--sc-gap));
+  bottom:calc((var(--sc-dot) - var(--sc-lh)) / 2 + var(--sc-gap)); }
+.sched-body::after{    /* ◯ */
+  content:""; position:absolute; left:0; top:calc((var(--sc-lh) - var(--sc-dot)) / 2);
+  width:var(--sc-dot); height:var(--sc-dot); border:2px solid var(--accent-d); border-radius:50%; }
+.sched-list > li:last-child .sched-time,
+.sched-list > li:last-child .sched-body{ padding-bottom:0; }
+.sched-list > li:last-child .sched-body::before{ display:none; }
+.sched-title{ font-size:17px; font-weight:500; line-height:var(--sc-lh); letter-spacing:.06em; }
+.sched-desc{ margin-top:2px; font-size:14px; line-height:1.8; letter-spacing:.04em; color:var(--ink-soft); }
+
+/* 休憩など補助的な行（<li class="is-break">）は控えめに */
+.sched-list > li.is-break .sched-time,
+.sched-list > li.is-break .sched-title{ color:var(--ink-soft); }
+.sched-list > li.is-break .sched-title{ font-size:15px; font-weight:400; }
+.sched-list > li.is-break .sched-body::after{ border-width:1px; border-color:var(--accent); }
+
+@media (max-width:480px){
+  .sched-list > li{ grid-template-columns:52px 1fr; }
+  .sched-time{ font-size:15px; }
+  .sched-end{ font-size:12px; }   /* 「〜00:00」を52px幅に収める（13pxだとはみ出す） */
+  .sched-body{ padding-left:26px; }
+}
+
+/* =========================================================
+   個別ページ追加分 その5（player.html：演技順）
+   ※ 新規クラスのみ。既存セレクタは上書きしない。
+   ========================================================= */
+
+/* ---------- 演技順：A4画像（縦長）。PCでは幅を抑えて中央に置く ---------- */
+/* ※ .reveal は外側の .order-wrap に付ける（.order-sheet 自身の transition と競合させないため） */
+.order-wrap{ max-width:760px; margin:0 auto; }
+.order-sheet{ background:var(--card); border:1px solid var(--line); transition:border-color .3s; }
+.order-sheet:hover{ border-color:var(--accent); }
+.order-sheet a{ display:block; cursor:zoom-in; }
+.order-sheet img{ display:block; width:100%; height:auto; }
+.order-sheet + .note{ margin-top:18px; }

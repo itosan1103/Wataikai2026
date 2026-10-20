@@ -1,307 +1,338 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="Width=device-width, initial-scale=1.0">
-        <title>開催部門・ルール | 第2回 Juggling Next</title>
-        <meta name="description" content="第2回 Juggling Next の競技概要。開催部門・審査基準など。">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,300;1,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="assets/style.css">
-    </head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>開催部門・ルール | 輪大会2026</title>
+<meta name="description" content="輪大会2026の開催部門・ルール。各部門の概要、審査基準、演技時間・楽曲等の取り決めをご案内します。">
+
+<!-- フォント: トップページと統一（Zen Kaku Gothic New ＋ DM Mono）-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="stylesheet" href="style.css?v=20261002">
+</head>
 <body>
-    <header>
-        <div class="header-inner">
-            <a href="index.html" class="header-logo">
-        第2回 Juggling Next
-      <span>2026.08.22 Nagoya</span>
-            </a>
-            <nav class="nav-desktop">
-      <a href="index.html">HOME</a>
-      <a href="rule.html" class="current">開催部門・ルール</a>
+
+<!-- ===================== HEADER（index.html と同一構造／現在ページに active） ===================== -->
+<header id="header">
+  <div class="container nav">
+    <a href="index.html" class="brand" aria-label="輪大会2026 トップへ">
+      <img src="logo.png" class="mark" alt="">
+      <span class="txt"><span class="ja">輪大会2026</span></span>
+    </a>
+    <nav class="nav-links" id="menu">
+      <a href="index.html">トップ</a>
+      <a href="rule.html" class="active">開催部門・ルール</a>
       <a href="entry.html">出場エントリー</a>
-      <!--<a href="timetable.html">当日スケジュール</a>-->
-      <!--<a href="sponsor.html">ご協賛</a>-->
+      <!--<a href="sponsor.html">ご協賛・カンパ</a>-->
+      <a href="schedule.html">スケジュール</a>
+      <a href="player.html">演技順</a>
       <a href="access.html">アクセス</a>
-      <!--<a href="about.html">運営</a>-->
-      <a href="contact.html">お問い合わせ</a>                
-            </nav>
-            <button class="hamburger" id="hamburger" aria-label="メニューを開く"  aria-expanded="false">
-      <span></span><span></span><span></span>                
-            </button>
-        </div>
-    </header>
+      <a href="contact.html">お問い合わせ</a>
+      <!-- 今後追加予定：
+      <a href="about.html">運営について</a>
+      -->
+    </nav>
+    <button class="burger" id="burger" aria-label="メニュー"><span></span><span></span><span></span></button>
+  </div>
+</header>
 
-<!-- ========== MOBILE DRAWER ========== -->
- <nav class="nav-drawer" id="drawer" aria-hidden="true">
-    <a href="index.html">HOME</a>
-  <a href="rule.html" class="current">開催部門・ルール</a>
-  <a href="entry.html">出場エントリー</a>
-  <!--<a href="timetable.html">当日スケジュール</a>-->
-  <!--<a href="sponsor.html">ご協賛</a>-->
-  <a href="access.html">アクセス</a>
-  <!--<a href="about.html">運営</a>-->
-  <a href="contact.html">お問い合わせ</a>
-  <a href="https://x.com/JugglingNext" target="_blank" style="color:var(--gold)">公式X @JugglingNext ↗</a>
- </nav>
-<!-- ========== PAGE HERO ========== -->
- <section class="page-hero">
-    <span class="page-hero-kicker">Rules</span>
-    <h1 class="page-hero-title">開催部門・ルール</h1>
-    <p class="page-hero-brand">第2回 Juggling Next</p>
- </section> 
-
-<!-- ========== BREADCRUMB ========== -->
- <nav class="breadcrumb" aria-label="パンくずリスト">
-    <a href="index.html">HOME</a>
-    <span class="sep">›</span>
-    <span class="current">開催部門・ルール</span>
- </nav>
-<!-- ========== 開催部門 ========== -->
- <section class="section-block">
-    <div class="container fade-in">
-        <p class="section-title">◆ 開催部門</p>
-        <div class="division-grid">
-            <div class="division-card">
-                <span class="div-num">01</span>
-                <p class="div-name">ジュニア部門</p>
-                <p class="div-method">出場資格：歴<strong style="color:var(--gold)">2年</strong>以内<br>順位決定：審査員による<strong style="color:var(--gold)">審査</strong><BR>演技時間：<strong style="color:var(--gold)">4分</strong>以内</p>
-            </div>
-            <div class="division-card">
-                <span class="div-num">02</span>
-                <p class="div-name">Next部門</p>
-                <p class="div-method">出場資格：歴<strong style="color:var(--gold)">5年</strong>以内<br>順位決定：審査員による<strong style="color:var(--gold)">審査</strong><BR>演技時間：<strong style="color:var(--gold)">5分</strong>以内</p>
-            </div>
-            <div class="division-card">
-                <span class="div-num">03</span>
-                <p class="div-name">マスター部門</p>
-                <p class="div-method">出場資格：どなたでも<br>順位決定：審査員による<strong style="color:var(--gold)">審査</strong><BR>演技時間：<strong style="color:var(--gold)">6分</strong>以内</p>
-            </div>
-        </div>
-    </div>
- </section>
-<!-- ========== 審査員 ========== -->
-<section class="section-block">
-  <div class="container fade-in">
-    <p class="section-title">◆ 審査員</p>
-    <div class="rule-box">
-      <p class="tbd">※ 審査員は決定次第、こちらに掲載いたします。</p>
-    </div>
+<!-- ===================== PAGE HERO ===================== -->
+<section class="page-hero" id="top">
+  <div class="ring-bg" aria-hidden="true"></div>
+  <div class="container ph-inner">
+    <p class="ph-kicker">Rules</p>
+    <h1 class="ph-title">開催部門・ルール</h1>
+    <p class="ph-brand">輪大会2026</p>
   </div>
 </section>
 
-
-<!-- ========== 順位決定方法詳細 ========== -->
-<section class="section-block">
-  <div class="container fade-in">
-    <p class="section-title">◆ 順位決定方法</p>
-    <ul>
-      <li>全部門、審査員数名による審査で順位を決定する。</li>
-      <li>各部門の審査項目およびその配点は以下の通りとする。</li>
-
-    <h3 class="sub-heading">ジュニア部門・Next部門</h3>
-    <div class="score-grid">
-      <div class="score-item">
-        <span class="score-label">難易度</span>
-        <span class="score-val">40<span class="score-unit">点</span></span>
-      </div>
-      <div class="score-item">
-        <span class="score-label">完成度</span>
-        <span class="score-val">40<span class="score-unit">点</span></span>
-      </div>
-      <div class="score-item">
-        <span class="score-label">演技構成</span>
-        <span class="score-val">20<span class="score-unit">点</span></span>
-      </div>
-    </div>
-
-    <h3 class="sub-heading">マスター部門</h3>
-    <div class="score-grid">
-      <div class="score-item">
-        <span class="score-label">難易度</span>
-        <span class="score-val">40<span class="score-unit">点</span></span>
-      </div>
-      <div class="score-item">
-        <span class="score-label">完成度</span>
-        <span class="score-val">30<span class="score-unit">点</span></span>
-      </div>
-      <div class="score-item">
-        <span class="score-label">演技構成</span>
-        <span class="score-val">20<span class="score-unit">点</span></span>
-      </div>
-      <div class="score-item">
-        <span class="score-label">新奇性</span>
-        <span class="score-val">10<span class="score-unit">点</span></span>
-      </div>
-    </div>
-      <li>審査員による点数を平均化し、各項目の合計点数で順位を決定する。</li>
-      <li>同点の場合、下記の優先順位で順位を決定する。<BR>
-　　①難易度の点数が高い者<BR>
-　　②完成度の点数が高い者<BR>
-　　③演技構成の点数が高い者<BR>
-　　④審査員による議論の結果、上位となった者</li>
-      <li>順位決定後、各部門1位から3位までを表彰する。</li>
-    </ul>
-  </div>
-</section>
-<!-- ========== 審査基準詳細 ========== -->
-<section class="section-block">
-  <div class="container fade-in">
-    <p class="section-title">◆ 審査基準詳細</p>
-
-    <h3 class="sub-heading">難易度</h3>
-    <p>その演技がどれほど難しいかを評価する。</p>
-    <p>技の習得しにくさ、技のリスクの大きさ、技の数や密度、技同士のコンビネーションなどが評価の対象となる。</p>
-    <p>なお、ドロップやミスの数についてはこの項目では評価しないが、当然、技が成功しなければ、その技に対する評価は乏しいものとなる。</p>
-
-    <h3 class="sub-heading">完成度</h3>
-    <p>演者が個々の技をミスなく成功させられたかどうかと、演技に対する熟練度の高さを評価する。</p>
-    <p>ドロップやミスが多ければ減点の対象となる。ただし、そのドロップやミスが演技に与える影響の大きさも考慮する。</p>
-    <p>ジャグリングのフォームや安定感も評価の基準となる。</p>
-
-    <h3 class="sub-heading">演技構成</h3>
-    <p>演技の構成要素とその組み合わせが、演技を魅力的なものにしていたかを評価する。「魅力的」の判断基準は各審査員に委ねる。</p>
-    <p>演技の構成要素とは、技の選択、技の見せ方、技を見せる順番やタイミング、振り付け、音楽との調和、衣装やメイク、キャラクター、使う道具やセットなどが該当する。</p>
-
-    <h3 class="sub-heading">新奇性<span style="font-size:13px;color:var(--gray);font-weight:400;margin-left:8px">※ マスター部門のみ</span></h3>
-    <p>技の希少性と進歩性を評価する。</p>
-    <p>希少性とは、日本においてジャグリングを行うものにはほとんど知られていない、もしくは、日本で行うものがほとんどいないことを指す。</p>
-    <p>進歩性とは、日本においてジャグリングの技術の向上・発展に寄与しているかどうかを指す。</p>
-    <p>希少性や進歩性の程度や、それらを伴う技の数が評価基準となる。</p>
-    <p>なお、ドロップやミスの数についてはこの項目では評価しないが、当然、技が成功しなければ、その技に対する評価は乏しいものとなる。</p>
-  </div>
-</section>
-<!-- ========== 演技時間 ========== -->
-<section class="section-block">
-  <div class="container fade-in">
-    <p class="section-title">◆ 演技時間について</p>
-    <ul>
-      <li>使用楽曲の制限時間は演技時間上限と同じとする。</li>
-      <li>演技開始前の準備・終了後の撤収時間はそれぞれ1分以内。</li>
-      <li>最後の技・礼・決めポーズ・退場・音楽の停止のいずれかを演技終了点とする。</li>
-      <li>演技終了点が演技時間上限を超過していても、その時点までの演技内容は全て審査の対象とする。</li>
-      <li>演技終了点が演技時間上限を超過した場合、以下の条件で減点をする。</li>
-　　10秒以内　 -5点<BR>
-　　20秒以内　 -10点<BR>
-　　30秒以内　 -20点<BR>
-　　31秒以上　失格 (強制退場)
-    </ul>
-  </div>
-</section>
-<!-- ========== 使用楽曲について ========== -->
-<section class="section-block">
-  <div class="container fade-in">
-    <p class="section-title">◆ 使用楽曲について</p>
-    <ul>
-      <li>使用楽曲の音源データは1トラックにまとめなければならない。</li>
-      <li>音源の再生タイミング（板付き、曲先）については事前に確認を行い、取り決めたタイミングでスタートする。</li>
-      <li>運営側では、演技開始時の音源の再生、演技終了時の音源の停止以外の操作は行わない。フェードイン、フェードアウト等の特別な要望には対応できない。</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ========== 照明について ========== -->
-<section class="section-block">
-  <div class="container fade-in">
-    <p class="section-title">◆ 照明について</p>
-    <ul>
-      <li>本大会では、照明の明るさは全ての出場者において統一とする。出場者ごとに「明るめ」「暗め」「スポットライト」等の対応はできない。</li>
-      <li>演技中の照明操作、暗転も不可とする。</li>
-    </ul>
-  </div>
-</section>
-<!-- ========== 関連ページ ========== -->
-<section class="related-pages">
-  <p class="related-pages-title">◆ その他のページ</p>
-  <div class="related-grid">
-    <a href="entry.html" class="related-btn">
-      <img class="related-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzhhODRiIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICA8cGF0aCBkPSJNNiAzaDhsNCA0djEzYTEgMSAwIDAgMS0xIDFINmExIDEgMCAwIDEtMS0xVjRhMSAxIDAgMCAxIDEtMXoiLz4KICA8cGF0aCBkPSJNMTQgM3Y0aDQiLz4KICA8bGluZSB4MT0iOCIgeTE9IjEwIiB4Mj0iMTUiIHkyPSIxMCIvPgogIDxsaW5lIHgxPSI4IiB5MT0iMTMiIHgyPSIxMyIgeTI9IjEzIi8+CiAgPHBhdGggZD0iTTE0LjUgMTYuNWw0LTQgMiAyLTQgNC0yLjUuNXoiLz4KICA8bGluZSB4MT0iMTciIHkxPSIxNCIgeDI9IjE5IiB5Mj0iMTYiLz4KPC9zdmc+" alt="" width="20" height="20">
-      <span class="related-label">出場エントリー</span>
-      <span class="related-sub">Entry</span>
-    </a>
-    <!--<a href="timetable.html" class="related-btn">
-      <img class="related-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzhhODRiIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSI5Ii8+CiAgPGxpbmUgeDE9IjEyIiB5MT0iMTIiIHgyPSI5IiB5Mj0iOCIvPgogIDxsaW5lIHgxPSIxMiIgeTE9IjEyIiB4Mj0iMTIiIHkyPSI2Ii8+CiAgPGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMC44IiBmaWxsPSIjYzhhODRiIiBzdHJva2U9Im5vbmUiLz4KPC9zdmc+" alt="" width="20" height="20">
-      <span class="related-label">当日スケジュール</span>
-      <span class="related-sub">Schedule</span>
-    </a>-->
-    <!--<a href="sponsor.html" class="related-btn">
-      <img class="related-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzhhODRiIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICA8cGF0aCBkPSJNMTIgMjFDMTIgMjEgMyAxNCAzIDguNUE0LjUgNC41IDAgMCAxIDcuNSA0YzEuNzQgMCAzLjQxIDEgNC41IDIuMDlBNS45OSA1Ljk5IDAgMCAxIDE2LjUgNCA0LjUgNC41IDAgMCAxIDIxIDguNUMyMSAxNCAxMiAyMSAxMiAyMXoiLz4KPC9zdmc+" alt="" width="20" height="20">
-      <span class="related-label">ご協賛</span>
-      <span class="related-sub">Sponsor</span>
-    </a>-->
-    <a href="access.html" class="related-btn">
-      <img class="related-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzhhODRiIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICA8cGF0aCBkPSJNMTIgMkM4LjEzIDIgNSA1LjEzIDUgOWMwIDUuMjUgNyAxMyA3IDEzczctNy43NSA3LTEzYzAtMy44Ny0zLjEzLTctNy03eiIvPgogIDxjaXJjbGUgY3g9IjEyIiBjeT0iOSIgcj0iMi41Ii8+Cjwvc3ZnPg==" alt="" width="20" height="20">
-      <span class="related-label">アクセス</span>
-      <span class="related-sub">Access</span>
-    </a>
-    <!--<a href="about.html" class="related-btn">
-      <img class="related-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzhhODRiIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjciIHI9IjIuNSIvPgogIDxwYXRoIGQ9Ik03LjUgMjB2LTJhNC41IDQuNSAwIDAgMSA5IDB2MiIvPgogIDxjaXJjbGUgY3g9IjUiIGN5PSI5IiByPSIyIi8+CiAgPHBhdGggZD0iTTEgMjB2LTEuNWEzLjUgMy41IDAgMCAxIDUtMy4yIi8+CiAgPGNpcmNsZSBjeD0iMTkiIGN5PSI5IiByPSIyIi8+CiAgPHBhdGggZD0iTTIzIDIwdi0xLjVhMy41IDMuNSAwIDAgMC01LTMuMiIvPgo8L3N2Zz4=" alt="" width="20" height="20">
-      <span class="related-label">運営</span>
-      <span class="related-sub">About</span>
-    </a>-->
-    <a href="contact.html" class="related-btn">
-      <img class="related-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzhhODRiIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICA8cmVjdCB4PSIyIiB5PSI1IiB3aWR0aD0iMjAiIGhlaWdodD0iMTQiIHJ4PSIxLjUiLz4KICA8cG9seWxpbmUgcG9pbnRzPSIzLjUsNiAxMiwxMyAyMC41LDYiLz4KPC9zdmc+" alt="" width="20" height="20">
-      <span class="related-label">お問い合わせ</span>
-      <span class="related-sub">Contact</span>
-    </a>
-    <a href="https://x.com/BlueHat1103" target="_blank" rel="noopener" class="related-btn">
-      <img class="related-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzhhODRiIiBzdHJva2Utd2lkdGg9IjEuOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICA8bGluZSB4MT0iNSIgeTE9IjUiIHgyPSIxOSIgeTI9IjE5Ii8+CiAgPGxpbmUgeDE9IjE5IiB5MT0iNSIgeDI9IjUiIHkyPSIxOSIvPgo8L3N2Zz4=" alt="" width="20" height="20">
-      <span class="related-label">公式X</span>
-      <span class="related-sub">@bluehat1103</span>
-    </a>
-  </div>
-  <a href="index.html" class="home-link">← HOME に戻る</a>
-</section>
-<!-- ========== FOOTER ========== -->
-<footer>
+<!-- ===================== BREADCRUMB ===================== -->
+<div class="container">
+  <nav class="crumb" aria-label="パンくずリスト">
+    <a href="index.html">トップ</a><span class="sep">›</span><span class="cur">開催部門・ルール</span>
+  </nav>
+</div>
+<!-- ===================== 開催部門 ===================== -->
+<section id="divisions">
   <div class="container">
-    <p class="footer-logo">第2回 Juggling Next</p>
-    <p class="footer-sub">2026.08.22 — 名古屋市南文化小劇場</p>
-    <div class="footer-links">
-      <a href="index.html">HOME</a>
+    <div class="sec-head reveal"><h2>開催部門</h2></div>
+    <div class="div-grid reveal">
+
+      <div class="div-card">
+        <p class="dname">ジュニア部門</p>
+        <div class="dmeta">
+          <div class="mrow"><span class="mk">出場資格</span><span class="mv">ジャグリング歴 <strong>3年</strong>以内<BR>リング・エイトリングの演技を行う者<BR>個人でのみ出場可</span></div>
+          <div class="mrow"><span class="mk">順位</span><span class="mv">審査員による<strong>審査</strong></span></div>
+          <div class="mrow"><span class="mk">時間</span><span class="mv"><strong>5分</strong>以内</span></div>
+        </div>
+      </div>
+
+      <div class="div-card">
+        <p class="dname">シニア部門</p>
+        <div class="dmeta">
+          <div class="mrow"><span class="mk">出場資格</span><span class="mv">リング・エイトリングの演技を行う者<BR>個人でのみ出場可</span></div>
+          <div class="mrow"><span class="mk">順位</span><span class="mv">審査員による<strong>審査</strong></span></div>
+          <div class="mrow"><span class="mk">時間</span><span class="mv"><strong>5分</strong>以内</span></div>
+        </div>
+      </div>
+
+      <div class="div-card">
+        <p class="dname">フリー部門</p>
+        <div class="dmeta">
+          <div class="mrow"><span class="mk">出場資格</span><span class="mv">リング・エイトリングの演技を行う者<BR>個人・チームで出場可</span></div>
+          <div class="mrow"><span class="mk">順位</span><span class="mv"><strong>観客投票</strong></span></div>
+          <div class="mrow"><span class="mk">時間</span><span class="mv"><strong>5分</strong>以内</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 審査員 ===================== -->
+<section class="alt" id="judges">
+  <div class="container">
+    <div class="sec-head reveal"><h2>審査員</h2></div>
+    <div class="judge-grid reveal">
+
+      <figure class="judge-card">
+        <a href="assets/judges/アマルガ様.jpg" class="js-zoom">
+          <img src="assets/judges/アマルガ様.jpg" width="1200" height="675" alt="審査員 アマルガ様" loading="lazy" decoding="async">
+        </a>
+      </figure>
+
+      <figure class="judge-card">
+        <a href="assets/judges/ありのみ様.jpg" class="js-zoom">
+          <img src="assets/judges/ありのみ様.jpg" width="1200" height="675" alt="審査員 ありのみ様" loading="lazy" decoding="async">
+        </a>
+      </figure>
+
+      <figure class="judge-card">
+        <a href="assets/judges/柴田光之進様.jpg" class="js-zoom">
+          <img src="assets/judges/柴田光之進様.jpg" width="1200" height="675" alt="審査員 柴田光之進様" loading="lazy" decoding="async">
+        </a>
+      </figure>
+
+      <figure class="judge-card">
+        <a href="assets/judges/谷岡 健人様.jpg" class="js-zoom">
+          <img src="assets/judges/谷岡 健人様.jpg" width="1200" height="675" alt="審査員 谷岡 健人様" loading="lazy" decoding="async">
+        </a>
+      </figure>
+
+    </div>
+    <p class="note reveal" style="margin-top:18px;">※画像をタップすると拡大表示されます。</p>
+  </div>
+</section>
+
+<!-- ===================== 順位決定方法（ジュニア・シニア） ===================== -->
+<section id="ranking">
+  <div class="container">
+    <div class="sec-head reveal"><h2>順位決定方法（ジュニア・シニア）</h2></div>
+
+    <ul class="rlist reveal">
+      <li>ジュニア部門、シニア部門については、審査員4名による審査で順位を決定します。</li>
+      <li>各部門の審査項目および配点は以下の通りとします。
+      </li>
+    </ul>
+
+    <h3 class="subh reveal">審査項目・配点</h3>
+    <table class="score-table reveal">
+      <thead><tr><th>審査項目</th><th>配点</th></tr></thead>
+      <tbody>
+        <tr><th>難易度</th><td>30<small>点</small></td></tr>
+        <tr><th>安定度</th><td>30<small>点</small></td></tr>
+        <tr><th>演技構成</th><td>30<small>点</small></td></tr>
+        <tr><th>新奇性</th><td>10<small>点</small></td></tr>
+        <tr class="total"><th>合計</th><td>100<small>点</small></td></tr>
+      </tbody>
+    </table>
+
+    <ul class="rlist reveal" style="margin-top:26px;">
+      <li>審査員は0.5点刻みで点数を付け、審査員全員の点数の平均により順位を決定します。</li>
+      <li>同点の場合、下記の優先順位で順位を決定します。
+        <span class="sub">① 安定度の点数が高い者<BR>② 審査員による審議</span>
+      </li>
+      <li>順位決定後、各部門 1位〜3位を表彰します。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== 審査項目詳細 ===================== -->
+<section class="alt" id="criteria">
+  <div class="container">
+    <div class="sec-head reveal"><h2>審査項目詳細</h2></div>
+
+    <div class="prose reveal">
+      <h3 class="subh">難易度</h3>
+      <p>演技がどれだけ難しいものであったかを評価する。</p>
+      <p>道具の操作技術に関する要素全般（道具の数、操作のキレ、複雑さ、ダイナミックさ等）、及び演技全体における技の数や密度、コンビネーション等が評価の対象となる。</p>
+      <p>なお、成功・成立しなかった技に対する評価は乏しいものとなる。</p>
+
+      <h3 class="subh">安定度</h3>
+      <p>演技の精度と熟練度を評価する。</p>
+      <p>技の失敗、姿勢や軌道の乱れが少なく、また、それらが演技全体の印象に与えた影響が小さいほど高い評価が与えられる。</p>
+
+      <h3 class="subh">演技構成</h3>
+      <p>演技の魅力が最大限伝わるような流れになっていたかを評価する。</p>
+      <p>技の選択や順番、音楽との調和等が主な評価の対象となる。</p>
+      <p>また、振り付けや衣装、メイク等、ジャグリングと直接関係しない要素についても、それらが演技の魅力に寄与するものであれば評価の対象に含まれる。</p>
+
+      <h3 class="subh">新奇性</h3>
+      <p>技術の新しさと珍しさを評価する。</p>
+      <p>今日の日本において、まだ広く認知されていない、あるいは行われていない技術が評価の対象となる。</p>
+      <p>新しさと珍しさの程度、それらを伴う技が演技に占める割合、その技術の面白さ等を基準に評価が与えられる。</p>
+    </div>
+  </div>
+</section>
+<!-- ===================== 順位決定方法（フリー） ===================== -->
+<section id="ranking">
+  <div class="container">
+    <div class="sec-head reveal"><h2>順位決定方法（フリー）</h2></div>
+
+    <ul class="rlist reveal">
+      <li>フリー部門については、観客投票で順位を決定します。</li>
+      <li>観客の皆様には、自身の主観で1位、2位、3位と思う選手を選び、投票していただきます。</li>
+      <li>その後、各出場者が獲得した票を、以下のルールに従って得点化します。</li>
+    </ul>
+
+    <h3 class="subh reveal">得点表</h3>
+    <table class="score-table reveal">
+      <thead><tr><th>投票順位</th><th>得点</th></tr></thead>
+      <tbody>
+        <tr><th>1位</th><td>4<small>点</small></td></tr>
+        <tr><th>2位</th><td>2<small>点</small></td></tr>
+        <tr><th>3位</th><td>1<small>点</small></td></tr>
+
+      </tbody>
+    </table>
+
+    <ul class="rlist reveal" style="margin-top:26px;">
+      <li>各出場者の得点を合計し、順位を決定します。</li>
+      <li>同点の場合、下記の優先順位で順位を決定します。
+        <span class="sub">① 1位の得票数が多い者<BR>② 2位の得票数が多い者<BR>③ スタッフによる決選投票で多く得票した者</span>
+      </li>
+      <li>順位決定後、1位〜3位を表彰します。</li>
+    </ul>
+  </div>
+</section>
+<!-- ===================== 演技時間について ===================== -->
+<section class="alt" id="time">
+  <div class="container">
+    <div class="sec-head reveal"><h2>演技時間について</h2></div>
+    <ul class="rlist reveal">
+      <li>使用楽曲の制限時間は、演技時間の上限と同じとします。</li>
+      <li>演技開始時点は、音源の音が流れ始めたタイミング（≠音源が再生されたタイミング）とし、演技開始時点より前の動作については審査の対象としません。</li>
+      <li>演技終了時点は、演者が演技終了の意思を表明したと判断できる最も早い時点とし、演技終了時点までに行われた動作を審査の対象とします。</li>
+      <li>演技終了点が上限を超過した場合、以下の条件で減点します。
+        <span class="sub">1秒以上10秒未満 −5点<BR>10秒以上20秒未満 −10点<BR>20秒以上30秒未満 −15点<BR>30秒以上 失格</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== 使用楽曲について ===================== -->
+<section id="music">
+  <div class="container">
+    <div class="sec-head reveal"><h2>使用楽曲について</h2></div>
+    <ul class="rlist reveal">
+      <li>使用楽曲の音源データは、1トラックにまとめてください。</li>
+      <li>運営側では、演技開始時の再生・終了時の停止以外の操作は行いません。フェードイン／フェードアウト等の特別なご要望には対応できません。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== 照明について ===================== -->
+<section class="alt" id="light">
+  <div class="container">
+    <div class="sec-head reveal"><h2>照明について</h2></div>
+    <ul class="rlist reveal">
+      <li>本大会では舞台を使用せず、会場の平土間で実施します。したがって、照明は会場の明かりを全灯した状態で固定とします。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== その他のページ ===================== -->
+<section class="related" style="padding-bottom:clamp(56px,8vw,96px);">
+  <div class="container">
+    <div class="sec-head reveal"><h2>その他のページ</h2></div>
+    <div class="rel-grid reveal">
+      <a href="entry.html"   class="rel-btn"><span class="rel-sub">Entry</span><span class="rel-label">出場エントリー</span></a>
+      <!--<a href="sponsor.html" class="rel-btn"><span class="rel-sub">Sponsor</span><span class="rel-label">ご協賛・カンパ</span></a>-->
+      <a href="schedule.html" class="rel-btn"><span class="rel-sub">Schedule</span><span class="rel-label">スケジュール</span></a>
+      <a href="player.html"  class="rel-btn"><span class="rel-sub">Player</span><span class="rel-label">演技順</span></a>
+      <a href="access.html"  class="rel-btn"><span class="rel-sub">Access</span><span class="rel-label">アクセス</span></a>
+      <a href="contact.html" class="rel-btn"><span class="rel-sub">Contact</span><span class="rel-label">お問い合わせ</span></a>
+      <a href="https://x.com/wataikai_ring" target="_blank" rel="noopener" class="rel-btn"><span class="rel-sub">X</span><span class="rel-label">公式X</span></a>
+    </div>
+    <a href="index.html" class="home-link reveal">← トップに戻る</a>
+  </div>
+</section>
+
+<!-- ===================== FOOTER（index.html と同一構造／リンク先のみ実ページへ） ===================== -->
+<footer id="contact">
+  <div class="container">
+    <div class="foot-name">輪大会2026</div>
+    <div class="foot-sub">2026.11.28 — 西成区民センター</div>
+    <nav class="foot-links">
+      <a href="index.html#about">大会概要</a>
+      <a href="index.html#whats">大会テーマ</a>
       <a href="rule.html">開催部門・ルール</a>
       <a href="entry.html">出場エントリー</a>
-      <!--<a href="timetable.html">当日スケジュール</a>-->
-      <!--<a href="sponsor.html">ご協賛</a>-->
+      <!--<a href="sponsor.html">ご協賛・カンパ</a>-->
+      <a href="schedule.html">スケジュール</a>
+      <a href="player.html">演技順</a>
       <a href="access.html">アクセス</a>
-      <!--<a href="about.html">運営</a>-->
       <a href="contact.html">お問い合わせ</a>
-      <a href="https://x.com/JugglingNext" target="_blank" rel="noopener">公式X</a>
-    </div>
-    <p class="copyright">© 2026 第2回 Juggling Next　主催：BlueHat</p>
+      <a href="https://x.com/wataikai_ring" target="_blank" rel="noopener">公式X</a>
+    </nav>
+    <div class="copy">© 輪大会2026</div>
   </div>
 </footer>
+<!-- ===================== 画像拡大表示 ===================== -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <img id="lightbox-img" src="" alt="">
+  <p class="lightbox-hint">タップで閉じる</p>
+</div>
 <script>
-/* ── ハンバーガー / ドロワー ── */
-const btn    = document.getElementById('hamburger');
-const drawer = document.getElementById('drawer');
+/* ヘッダーの境界線（index.html と同じ挙動） */
+const header = document.getElementById('header');
+addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 10));
 
-function toggleDrawer(forceClose) {
-  const open = forceClose ? false : !drawer.classList.contains('open');
-  drawer.classList.toggle('open', open);
-  btn.classList.toggle('open', open);
-  btn.setAttribute('aria-expanded', open);
-  drawer.setAttribute('aria-hidden', !open);
+/* ハンバーガー／ドロワー開閉（index.html と同じ） */
+const burger = document.getElementById('burger');
+const menu = document.getElementById('menu');
+burger.addEventListener('click', () => { burger.classList.toggle('open'); menu.classList.toggle('open'); });
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { burger.classList.remove('open'); menu.classList.remove('open'); }));
+
+/* スクロール・リビール（index.html と同じ） */
+const io = new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* 画像拡大表示（タップで開く／もう一度タップで閉じる） */
+const lb    = document.getElementById('lightbox');
+const lbImg = document.getElementById('lightbox-img');
+
+document.querySelectorAll('.js-zoom').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    lbImg.src = a.getAttribute('href');
+    lbImg.alt = a.querySelector('img').alt;
+    lb.classList.add('open');
+    lb.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('no-scroll');
+  });
+});
+
+function closeLightbox(){
+  lb.classList.remove('open');
+  lb.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('no-scroll');
 }
-
-btn.addEventListener('click', e => { e.stopPropagation(); toggleDrawer(); });
-
-drawer.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => toggleDrawer(true));
-});
-
-document.addEventListener('click', e => {
-  if (drawer.classList.contains('open') &&
-      !drawer.contains(e.target) && !btn.contains(e.target)) {
-    toggleDrawer(true);
-  }
-});
-
-/* ── スクロールフェードイン ── */
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.06 });
-document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+lb.addEventListener('click', closeLightbox);
+addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 </script>
 </body>
 </html>

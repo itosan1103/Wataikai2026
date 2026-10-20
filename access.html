@@ -1,209 +1,152 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="Width=device-width, initial-scale=1.0">
-        <title>アクセス | 第2回 Juggling Next</title>
-        <meta name="description" content="第2回 Juggling Next の会場アクセス。">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,300;1,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="assets/style.css">
-    </head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>アクセス | 輪大会2026</title>
+<meta name="description" content="輪大会2026の会場アクセス。大阪市立 西成区民センターへの行き方をご案内します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="stylesheet" href="style.css?v=20261002">
+</head>
 <body>
- <!-- ========== HEADER ========== -->
-<header>
-  <div class="header-inner">
-    <a href="index.html" class="header-logo">
-      第2回 Juggling Next
-      <span>2026.08.22 Nagoya</span>
+
+<!-- ===================== HEADER ===================== -->
+<header id="header">
+  <div class="container nav">
+    <a href="index.html" class="brand" aria-label="輪大会2026 トップへ">
+      <img src="logo.png" class="mark" alt="">
+      <span class="txt"><span class="ja">輪大会2026</span></span>
     </a>
-    <nav class="nav-desktop">
-      <a href="index.html">HOME</a>
+    <nav class="nav-links" id="menu">
+      <a href="index.html">トップ</a>
       <a href="rule.html">開催部門・ルール</a>
-      <a href="entry.html" class="current">出場エントリー</a>
-      <!--<a href="timetable.html">当日スケジュール</a>-->
-      <!--<a href="sponsor.html">ご協賛</a>-->
-      <a href="access.html">アクセス</a>
-      <!--<a href="about.html">運営</a>-->
+      <a href="entry.html">出場エントリー</a>
+      <!--<a href="sponsor.html">ご協賛・カンパ</a>-->
+      <a href="schedule.html">スケジュール</a>
+      <a href="player.html">演技順</a>
+      <a href="access.html" class="active">アクセス</a>
       <a href="contact.html">お問い合わせ</a>
+      <!-- 今後追加予定：
+      <a href="about.html">運営について</a>
+      -->
     </nav>
-    <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="burger" id="burger" aria-label="メニュー"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<!-- ========== MOBILE DRAWER ========== -->
-<nav class="nav-drawer" id="drawer" aria-hidden="true">
-  <a href="index.html">HOME</a>
-  <a href="rule.html">開催部門・ルール</a>
-  <a href="entry.html" class="current">出場エントリー</a>
-  <!--<a href="timetable.html">当日スケジュール</a>-->
-  <!--<a href="sponsor.html">ご協賛</a>-->
-  <a href="access.html">アクセス</a>
-  <!--<a href="about.html">運営</a>-->
-  <a href="contact.html">お問い合わせ</a>
-  <a href="https://x.com/JugglingNext" target="_blank" style="color:var(--gold)">公式X @JugglingNext ↗</a>
-</nav>
-<!-- ========== PAGE HERO ========== -->
-<section class="page-hero">
-  <span class="page-hero-kicker">Access</span>
-  <h1 class="page-hero-title">アクセス</h1>
-  <p class="page-hero-brand">第2回 Juggling Next</p>
+<!-- ===================== PAGE HERO ===================== -->
+<section class="page-hero" id="top">
+  <div class="ring-bg" aria-hidden="true"></div>
+  <div class="container ph-inner">
+    <p class="ph-kicker">Access</p>
+    <h1 class="ph-title">アクセス</h1>
+    <p class="ph-brand">輪大会2026</p>
+  </div>
 </section>
 
-<!-- ========== BREADCRUMB ========== -->
-<nav class="breadcrumb" aria-label="パンくずリスト">
-  <a href="index.html">HOME</a>
-  <span class="sep">›</span>
-  <span class="current">アクセス</span>
-</nav>
-<!-- ========== 会場情報 ========== -->
-<section class="section-block">
-  <div class="container fade-in">
-    <p class="section-title">◆ 会場情報</p>
-    <div class="info-list">
-      <div class="info-list-item">
-        <span class="info-label">会場名</span>
-        <span class="info-value">名古屋市南文化小劇場 ホール</span>
-      </div>
-      <div class="info-list-item">
-        <span class="info-label">住所</span>
-        <span class="info-value">〒457-0071<br>愛知県名古屋市南区千竃通二丁目10番地の2</span>
-      </div>
-      <div class="info-list-item">
-        <span class="info-label">観覧</span>
-        <span class="info-value">予約不要・入場無料（カンパ制）・入退場自由</span>
-      </div>
-    </div>
+<!-- ===================== BREADCRUMB ===================== -->
+<div class="container">
+  <nav class="crumb" aria-label="パンくずリスト">
+    <a href="index.html">トップ</a><span class="sep">›</span><span class="cur">アクセス</span>
+  </nav>
+</div>
 
-    <p class="sub-heading">■ 地図</p>
-    <div class="map-embed">
-      <iframe
-        src="https://maps.google.com/maps?q=%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%B8%82%E5%8D%97%E6%96%87%E5%8C%96%E5%B0%8F%E5%8A%87%E5%A0%B4&t=&z=16&ie=UTF8&iwloc=&output=embed"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        title="名古屋市南文化小劇場の地図">
-      </iframe>
-    </div>
-    <a href="https://maps.google.com/?q=名古屋市南文化小劇場"
-       target="_blank" rel="noopener" class="map-link-btn">
-      <span style="font-size:18px">🗺</span>
-      <span>Google マップアプリで開く</span>
-      <span style="font-size:12px">↗</span>
-    </a>
-  </div>
-</section>
-<!-- ========== 交通アクセス ========== -->
-<section class="section-block">
-  <div class="container fade-in">
-    <p class="section-title">◆ 交通アクセス</p>
-    <p class="sub-heading">■ 公共交通機関でお越しの方</p>
-    <div class="rule-box">
-      <p>地下鉄名城線「堀田」下車　3番出口より、市バス（基幹1号系統、金山18号系統）「千竈通2丁目」下車すぐ</p>
-    </div>
-    <p class="sub-heading">■ お車でお越しの方</p>
-    <div class="rule-box">
-      <p>会場の駐車場はご利用いただけません。なるべく公共交通機関でお越しください。</p>
-      <p style="margin-bottom:0">お車でお越しの際は、近隣のコインパーキング等をご利用ください。</p>
-    </div>
-    <p style="font-size:13px;color:var(--gray);margin-top:20px">
-      ※ 会場へのお問い合わせはご遠慮ください。大会に関するお問い合わせは<a href="contact.html">こちら</a>までお願いいたします。
-    </p>
-  </div>
-</section>
-<!-- ========== 関連ページ ========== -->
-<section class="related-pages">
-  <p class="related-pages-title">◆ その他のページ</p>
-  <div class="related-grid">
-    <a href="rule.html" class="related-btn">
-      <img class="related-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzhhODRiIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICA8cGF0aCBkPSJNNiAzaDEydjZhNiA2IDAgMCAxLTEyIDBWM3oiLz4KICA8cGF0aCBkPSJNNiA1SDRhMSAxIDAgMCAwLTEgMXYxYTMgMyAwIDAgMCAzIDMiLz4KICA8cGF0aCBkPSJNMTggNWgyYTEgMSAwIDAgMSAxIDF2MWEzIDMgMCAwIDEtMyAzIi8+CiAgPGxpbmUgeDE9IjEyIiB5MT0iMTUiIHgyPSIxMiIgeTI9IjE4Ii8+CiAgPHBhdGggZD0iTTggMjFoOHYtMWEyIDIgMCAwIDAtMi0yaC00YTIgMiAwIDAgMC0yIDJ2MXoiLz4KPC9zdmc+" alt="" width="20" height="20">
-      <span class="related-label">開催部門・ルール</span>
-      <span class="related-sub">Rules</span>
-    </a>
-    <a href="entry.html" class="related-btn">
-      <img class="related-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzhhODRiIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICA8cGF0aCBkPSJNNiAzaDhsNCA0djEzYTEgMSAwIDAgMS0xIDFINmExIDEgMCAwIDEtMS0xVjRhMSAxIDAgMCAxIDEtMXoiLz4KICA8cGF0aCBkPSJNMTQgM3Y0aDQiLz4KICA8bGluZSB4MT0iOCIgeTE9IjEwIiB4Mj0iMTUiIHkyPSIxMCIvPgogIDxsaW5lIHgxPSI4IiB5MT0iMTMiIHgyPSIxMyIgeTI9IjEzIi8+CiAgPHBhdGggZD0iTTE0LjUgMTYuNWw0LTQgMiAyLTQgNC0yLjUuNXoiLz4KICA8bGluZSB4MT0iMTciIHkxPSIxNCIgeDI9IjE5IiB5Mj0iMTYiLz4KPC9zdmc+" alt="" width="20" height="20">
-      <span class="related-label">出場エントリー</span>
-      <span class="related-sub">Entry</span>
-    </a>
-    <!--<a href="timetable.html" class="related-btn">
-      <img class="related-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzhhODRiIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSI5Ii8+CiAgPGxpbmUgeDE9IjEyIiB5MT0iMTIiIHgyPSI5IiB5Mj0iOCIvPgogIDxsaW5lIHgxPSIxMiIgeTE9IjEyIiB4Mj0iMTIiIHkyPSI2Ii8+CiAgPGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMC44IiBmaWxsPSIjYzhhODRiIiBzdHJva2U9Im5vbmUiLz4KPC9zdmc+" alt="" width="20" height="20">
-      <span class="related-label">スケジュール</span>
-      <span class="related-sub">Schedule</span>
-    </a>-->
-    <!--<a href="sponsor.html" class="related-btn">
-      <img class="related-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzhhODRiIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICA8cGF0aCBkPSJNMTIgMjFDMTIgMjEgMyAxNCAzIDguNUE0LjUgNC41IDAgMCAxIDcuNSA0YzEuNzQgMCAzLjQxIDEgNC41IDIuMDlBNS45OSA1Ljk5IDAgMCAxIDE2LjUgNCA0LjUgNC41IDAgMCAxIDIxIDguNUMyMSAxNCAxMiAyMSAxMiAyMXoiLz4KPC9zdmc+" alt="" width="20" height="20">
-      <span class="related-label">ご協賛・カンパ</span>
-      <span class="related-sub">Sponsor</span>
-    </a>-->
-    <!--<a href="about.html" class="related-btn">
-      <img class="related-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzhhODRiIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjciIHI9IjIuNSIvPgogIDxwYXRoIGQ9Ik03LjUgMjB2LTJhNC41IDQuNSAwIDAgMSA5IDB2MiIvPgogIDxjaXJjbGUgY3g9IjUiIGN5PSI5IiByPSIyIi8+CiAgPHBhdGggZD0iTTEgMjB2LTEuNWEzLjUgMy41IDAgMCAxIDUtMy4yIi8+CiAgPGNpcmNsZSBjeD0iMTkiIGN5PSI5IiByPSIyIi8+CiAgPHBhdGggZD0iTTIzIDIwdi0xLjVhMy41IDMuNSAwIDAgMC01LTMuMiIvPgo8L3N2Zz4=" alt="" width="20" height="20">
-      <span class="related-label">運営</span>
-      <span class="related-sub">About</span>
-    </a>-->
-    <a href="contact.html" class="related-btn">
-      <img class="related-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzhhODRiIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICA8cmVjdCB4PSIyIiB5PSI1IiB3aWR0aD0iMjAiIGhlaWdodD0iMTQiIHJ4PSIxLjUiLz4KICA8cG9seWxpbmUgcG9pbnRzPSIzLjUsNiAxMiwxMyAyMC41LDYiLz4KPC9zdmc+" alt="" width="20" height="20">
-      <span class="related-label">お問い合わせ</span>
-      <span class="related-sub">Contact</span>
-    </a>
-    <a href="https://x.com/JugglingNext" target="_blank" rel="noopener" class="related-btn">
-      <img class="related-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzhhODRiIiBzdHJva2Utd2lkdGg9IjEuOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICA8bGluZSB4MT0iNSIgeTE9IjUiIHgyPSIxOSIgeTI9IjE5Ii8+CiAgPGxpbmUgeDE9IjE5IiB5MT0iNSIgeDI9IjUiIHkyPSIxOSIvPgo8L3N2Zz4=" alt="" width="20" height="20">
-      <span class="related-label">公式X</span>
-      <span class="related-sub">@JugglingNext</span>
-    </a>
-  </div>
-  <a href="index.html" class="home-link">← HOME に戻る</a>
-</section>
-<!-- ========== FOOTER ========== -->
-<footer>
+<!-- ===================== 会場情報 ===================== -->
+<section id="venue">
   <div class="container">
-    <p class="footer-logo">第2回 Juggling Next</p>
-    <p class="footer-sub">2026.08.22 — 名古屋市南文化小劇場</p>
-    <div class="footer-links">
-      <a href="index.html">HOME</a>
+    <div class="sec-head reveal"><h2>会場情報</h2></div>
+    <div class="dtable reveal">
+      <div class="tr"><div class="th">会場名</div><div class="td">大阪市立 西成区民センター</div></div>
+      <div class="tr"><div class="th">住所</div><div class="td">大阪市西成区岸里1-1-50<small>〒557-0041</small></div></div>
+      <div class="tr"><div class="th">観覧</div><div class="td">入場無料（カンパ制）・事前予約不要・自由席</div></div>
+    </div>
+
+    <h3 class="subh reveal">地図</h3>
+    <div class="map-embed reveal">
+      <iframe
+        src="https://maps.google.com/maps?q=%E5%A4%A7%E9%98%AA%E5%B8%82%E7%AB%8B%E8%A5%BF%E6%88%90%E5%8C%BA%E6%B0%91%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%20%E5%A4%A7%E9%98%AA%E5%B8%82%E8%A5%BF%E6%88%90%E5%8C%BA%E5%B2%B8%E9%87%8C1-1-50&z=16&output=embed"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="大阪市立 西成区民センターの地図"></iframe>
+    </div>
+    <div class="reveal">
+      <a href="https://maps.google.com/?q=%E5%A4%A7%E9%98%AA%E5%B8%82%E7%AB%8B%E8%A5%BF%E6%88%90%E5%8C%BA%E6%B0%91%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%20%E5%A4%A7%E9%98%AA%E5%B8%82%E8%A5%BF%E6%88%90%E5%8C%BA%E5%B2%B8%E9%87%8C1-1-50"
+         target="_blank" rel="noopener" class="map-link">
+        <span>Google マップで開く</span><span class="ext">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 交通アクセス ===================== -->
+<section class="alt" id="transport">
+  <div class="container">
+    <div class="sec-head reveal"><h2>交通アクセス</h2></div>
+
+    <h3 class="subh reveal">公共交通機関でお越しの方</h3>
+    <div class="callout reveal">
+      <ul>
+        <li>Osaka Metro四つ橋線『岸里駅』下車　2番出口すぐ（区役所の東隣）</li>
+        <li>Osaka Metro堺筋線・南海本線・南海高野線『天下茶屋駅』下車　西出口南へ徒歩5分</li>
+      </ul>
+    </div>
+
+    <h3 class="subh reveal">お車でお越しの方</h3>
+    <div class="callout reveal">会場の駐車場はご利用いただけません。なるべく公共交通機関でお越しください。お車の場合は近隣のコインパーキング等をご利用ください。</div>
+
+    <p class="note reveal" style="margin-top:20px;">※会場へのお問い合わせはご遠慮ください。大会に関するお問い合わせは <a href="contact.html" style="color:var(--accent-d);">こちら</a> までお願いいたします。</p>
+  </div>
+</section>
+
+<!-- ===================== その他のページ ===================== -->
+<section class="related" style="padding-bottom:clamp(56px,8vw,96px);">
+  <div class="container">
+    <div class="sec-head reveal"><h2>その他のページ</h2></div>
+    <div class="rel-grid reveal">
+      <a href="rule.html"    class="rel-btn"><span class="rel-sub">Rules</span><span class="rel-label">開催部門・ルール</span></a>
+      <a href="entry.html"   class="rel-btn"><span class="rel-sub">Entry</span><span class="rel-label">出場エントリー</span></a>
+      <!--<a href="sponsor.html" class="rel-btn"><span class="rel-sub">Sponsor</span><span class="rel-label">ご協賛・カンパ</span></a>-->
+      <a href="schedule.html" class="rel-btn"><span class="rel-sub">Schedule</span><span class="rel-label">スケジュール</span></a>
+      <a href="player.html"  class="rel-btn"><span class="rel-sub">Player</span><span class="rel-label">演技順</span></a>
+      <a href="contact.html" class="rel-btn"><span class="rel-sub">Contact</span><span class="rel-label">お問い合わせ</span></a>
+      <a href="https://x.com/wataikai_ring" target="_blank" rel="noopener" class="rel-btn"><span class="rel-sub">X</span><span class="rel-label">公式X</span></a>
+    </div>
+    <a href="index.html" class="home-link reveal">← トップに戻る</a>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer id="contact">
+  <div class="container">
+    <div class="foot-name">輪大会2026</div>
+    <div class="foot-sub">2026.11.28 — 西成区民センター</div>
+    <nav class="foot-links">
+      <a href="index.html#about">大会概要</a>
+      <a href="index.html#whats">大会テーマ</a>
       <a href="rule.html">開催部門・ルール</a>
       <a href="entry.html">出場エントリー</a>
-      <!--<a href="timetable.html">当日スケジュール</a>-->
-      <!--<a href="sponsor.html">ご協賛</a>-->
+      <!--<a href="sponsor.html">ご協賛・カンパ</a>-->
+      <a href="schedule.html">スケジュール</a>
+      <a href="player.html">演技順</a>
       <a href="access.html">アクセス</a>
-      <!--<a href="about.html">運営</a>-->
       <a href="contact.html">お問い合わせ</a>
-      <a href="https://x.com/JugglingNext" target="_blank" rel="noopener">公式X</a>
-    </div>
-    <p class="copyright">© 2026 第2回 Juggling Next　主催：BlueHat</p>
+      <a href="https://x.com/wataikai_ring" target="_blank" rel="noopener">公式X</a>
+    </nav>
+    <div class="copy">© 輪大会2026</div>
   </div>
 </footer>
+
 <script>
-/* ── ハンバーガー / ドロワー ── */
-const btn    = document.getElementById('hamburger');
-const drawer = document.getElementById('drawer');
-
-function toggleDrawer(forceClose) {
-  const open = forceClose ? false : !drawer.classList.contains('open');
-  drawer.classList.toggle('open', open);
-  btn.classList.toggle('open', open);
-  btn.setAttribute('aria-expanded', open);
-  drawer.setAttribute('aria-hidden', !open);
-}
-
-btn.addEventListener('click', e => { e.stopPropagation(); toggleDrawer(); });
-
-drawer.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => toggleDrawer(true));
-});
-
-document.addEventListener('click', e => {
-  if (drawer.classList.contains('open') &&
-      !drawer.contains(e.target) && !btn.contains(e.target)) {
-    toggleDrawer(true);
-  }
-});
-
-/* ── スクロールフェードイン ── */
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.06 });
-document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+const header = document.getElementById('header');
+addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 10));
+const burger = document.getElementById('burger');
+const menu = document.getElementById('menu');
+burger.addEventListener('click', () => { burger.classList.toggle('open'); menu.classList.toggle('open'); });
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { burger.classList.remove('open'); menu.classList.remove('open'); }));
+const io = new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
 </body>
 </html>

@@ -1,208 +1,169 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="Width=device-width, initial-scale=1.0">
-        <title>出場エントリー | 第2回 Juggling Next</title>
-        <meta name="description" content="第2回 Juggling Next の出場エントリー。エントリー方法・期間・エントリー料など。">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,300;1,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="assets/style.css">
-    </head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>出場エントリー | 輪大会2026</title>
+<meta name="description" content="輪大会2026の出場エントリー。エントリー方法・料金・受付期間をご案内します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="stylesheet" href="style.css?v=20261002">
+</head>
 <body>
- <!-- ========== HEADER ========== -->
-<header>
-  <div class="header-inner">
-    <a href="index.html" class="header-logo">
-      第2回 Juggling Next
-      <span>2026.08.22 Nagoya</span>
+
+<!-- ===================== HEADER ===================== -->
+<header id="header">
+  <div class="container nav">
+    <a href="index.html" class="brand" aria-label="輪大会2026 トップへ">
+      <img src="logo.png" class="mark" alt="">
+      <span class="txt"><span class="ja">輪大会2026</span></span>
     </a>
-    <nav class="nav-desktop">
-      <a href="index.html">HOME</a>
+    <nav class="nav-links" id="menu">
+      <a href="index.html">トップ</a>
       <a href="rule.html">開催部門・ルール</a>
-      <a href="entry.html" class="current">出場エントリー</a>
-      <!--<a href="timetable.html">当日スケジュール</a>-->
-      <!--<a href="sponsor.html">ご協賛</a>-->
+      <a href="entry.html" class="active">出場エントリー</a>
+      <!--<a href="sponsor.html">ご協賛・カンパ</a>-->
+      <a href="schedule.html">スケジュール</a>
+      <a href="player.html">演技順</a>
       <a href="access.html">アクセス</a>
-      <!--<a href="about.html">運営</a>-->
       <a href="contact.html">お問い合わせ</a>
+      <!-- 今後追加予定：
+      <a href="about.html">運営について</a>
+      -->
     </nav>
-    <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="burger" id="burger" aria-label="メニュー"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<!-- ========== MOBILE DRAWER ========== -->
-<nav class="nav-drawer" id="drawer" aria-hidden="true">
-  <a href="index.html">HOME</a>
-  <a href="rule.html">開催部門・ルール</a>
-  <a href="entry.html" class="current">出場エントリー</a>
-  <!--<a href="timetable.html">当日スケジュール</a>-->
-  <!--<a href="sponsor.html">ご協賛</a>-->
-  <a href="access.html">アクセス</a>
-  <!--<a href="about.html">運営</a>-->
-  <a href="contact.html">お問い合わせ</a>
-  <a href="https://x.com/JugglingNext" target="_blank" style="color:var(--gold)">公式X @JugglingNext ↗</a>
-</nav>
-</nav>
-<!-- ========== PAGE HERO ========== -->
-<section class="page-hero">
-  <span class="page-hero-kicker">Entry</span>
-  <h1 class="page-hero-title">出場エントリー</h1>
-  <p class="page-hero-brand">第2回 Juggling Next</p>
+<!-- ===================== PAGE HERO ===================== -->
+<section class="page-hero" id="top">
+  <div class="ring-bg" aria-hidden="true"></div>
+  <div class="container ph-inner">
+    <p class="ph-kicker">Entry</p>
+    <h1 class="ph-title">出場エントリー</h1>
+    <p class="ph-brand">輪大会2026</p>
+  </div>
 </section>
 
-<!-- ========== BREADCRUMB ========== -->
-<nav class="breadcrumb" aria-label="パンくずリスト">
-  <a href="index.html">HOME</a>
-  <span class="sep">›</span>
-  <span class="current">出場エントリー</span>
-</nav>
-<!-- ========== エントリー方法 ========== -->
-<section class="section-block">
-  <div class="container fade-in">
-    <p class="section-title">◆ エントリー方法</p>
-    <ul>
-      <li>専用フォームにてエントリーを受け付けます。</li>
-      <li>複数部門へのエントリーは可能です。その場合は、部門ごとにエントリー料が必要となります。</li>
-    </ul>
-<div style="margin-top:28px;text-align:center">
-  <p style="color:var(--gray);font-size:13px;margin-bottom:12px;text-align:center">※ 受付開始後、下記ボタンが有効になります</p>
-  <a href="#" class="cta-btn disabled">フォームはこちら（準備中）</a>
+<!-- ===================== BREADCRUMB ===================== -->
+<div class="container">
+  <nav class="crumb" aria-label="パンくずリスト">
+    <a href="index.html">トップ</a><span class="sep">›</span><span class="cur">出場エントリー</span>
+  </nav>
 </div>
-  </div>
-</section>
-<!-- ========== エントリー料 ========== -->
-<section class="section-block">
-  <div class="container fade-in">
-    <p class="section-title">◆ エントリー料</p>
-    <div class="entry-fee-grid">
-      <div class="fee-item">
-        <span class="fee-div">ジュニア部門</span>
-        <span class="fee-price">¥4,000</span>
-      </div>
-      <div class="fee-item">
-        <span class="fee-div">Next部門</span>
-        <span class="fee-price">¥4,000</span>
-      </div>
-      <div class="fee-item">
-        <span class="fee-div">マスター部門</span>
-        <span class="fee-price">¥6,000</span>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- ========== エントリー受付期間 ========== -->
-<section class="section-block">
-  <div class="container fade-in">
-    <p class="section-title">◆ エントリー受付期間</p>
-    <div class="rule-box">
-      <p style="font-family:'Shippori Mincho',serif;font-size:16px;font-weight:600;color:var(--gold2);margin-bottom:6px">2026年5月30日（土）21:00 ～ 6月21日（日）23:59</p>
-      <p style="margin:0;font-size:14px">エントリーは<strong style="color:var(--gold2)">先着順</strong>となります。定員に達した部門から随時エントリーを締め切ります。</p>
-    </div>
-    <ul style="margin-top:16px">
-      <li>受付開始は <a href="https://x.com/JugglingNext" target="_blank">公式X（@JugglingNext）</a>にてもお知らせします。</li>
-      <li>定員に達した部門は、期間内であってもエントリーを締め切る場合があります。お早めにエントリーください。</li>
-    </ul>
-<div style="margin-top:28px;text-align:center">
-  <p style="color:var(--gray);font-size:13px;margin-bottom:12px;text-align:center">※ 受付開始後、下記ボタンが有効になります</p>
-  <a href="#" class="cta-btn disabled">フォームはこちら（準備中）</a>
-</div>
-  </div>
-</section>
-<!-- ========== 関連ページ ========== -->
-<section class="related-pages">
-  <p class="related-pages-title">◆ その他のページ</p>
-  <div class="related-grid">
-    <a href="rule.html" class="related-btn">
-      <img class="related-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzhhODRiIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICA8cGF0aCBkPSJNNiAzaDEydjZhNiA2IDAgMCAxLTEyIDBWM3oiLz4KICA8cGF0aCBkPSJNNiA1SDRhMSAxIDAgMCAwLTEgMXYxYTMgMyAwIDAgMCAzIDMiLz4KICA8cGF0aCBkPSJNMTggNWgyYTEgMSAwIDAgMSAxIDF2MWEzIDMgMCAwIDEtMyAzIi8+CiAgPGxpbmUgeDE9IjEyIiB5MT0iMTUiIHgyPSIxMiIgeTI9IjE4Ii8+CiAgPHBhdGggZD0iTTggMjFoOHYtMWEyIDIgMCAwIDAtMi0yaC00YTIgMiAwIDAgMC0yIDJ2MXoiLz4KPC9zdmc+" alt="" width="20" height="20">
-      <span class="related-label">開催部門・ルール</span>
-      <span class="related-sub">Rules</span>
-    </a>
-    <!--<a href="timetable.html" class="related-btn">
-      <img class="related-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzhhODRiIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSI5Ii8+CiAgPGxpbmUgeDE9IjEyIiB5MT0iMTIiIHgyPSI5IiB5Mj0iOCIvPgogIDxsaW5lIHgxPSIxMiIgeTE9IjEyIiB4Mj0iMTIiIHkyPSI2Ii8+CiAgPGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMC44IiBmaWxsPSIjYzhhODRiIiBzdHJva2U9Im5vbmUiLz4KPC9zdmc+" alt="" width="20" height="20">
-      <span class="related-label">当日スケジュール</span>
-      <span class="related-sub">Schedule</span>
-    </a>-->
-    <!--<a href="sponsor.html" class="related-btn">
-      <img class="related-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzhhODRiIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICA8cGF0aCBkPSJNMTIgMjFDMTIgMjEgMyAxNCAzIDguNUE0LjUgNC41IDAgMCAxIDcuNSA0YzEuNzQgMCAzLjQxIDEgNC41IDIuMDlBNS45OSA1Ljk5IDAgMCAxIDE2LjUgNCA0LjUgNC41IDAgMCAxIDIxIDguNUMyMSAxNCAxMiAyMSAxMiAyMXoiLz4KPC9zdmc+" alt="" width="20" height="20">
-      <span class="related-label">ご協賛</span>
-      <span class="related-sub">Sponsor</span>
-    </a>-->
-    <a href="access.html" class="related-btn">
-      <img class="related-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzhhODRiIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICA8cGF0aCBkPSJNMTIgMkM4LjEzIDIgNSA1LjEzIDUgOWMwIDUuMjUgNyAxMyA3IDEzczctNy43NSA3LTEzYzAtMy44Ny0zLjEzLTctNy03eiIvPgogIDxjaXJjbGUgY3g9IjEyIiBjeT0iOSIgcj0iMi41Ii8+Cjwvc3ZnPg==" alt="" width="20" height="20">
-      <span class="related-label">アクセス</span>
-      <span class="related-sub">Access</span>
-    </a>
-    <!--<a href="about.html" class="related-btn">
-      <img class="related-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzhhODRiIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjciIHI9IjIuNSIvPgogIDxwYXRoIGQ9Ik03LjUgMjB2LTJhNC41IDQuNSAwIDAgMSA5IDB2MiIvPgogIDxjaXJjbGUgY3g9IjUiIGN5PSI5IiByPSIyIi8+CiAgPHBhdGggZD0iTTEgMjB2LTEuNWEzLjUgMy41IDAgMCAxIDUtMy4yIi8+CiAgPGNpcmNsZSBjeD0iMTkiIGN5PSI5IiByPSIyIi8+CiAgPHBhdGggZD0iTTIzIDIwdi0xLjVhMy41IDMuNSAwIDAgMC01LTMuMiIvPgo8L3N2Zz4=" alt="" width="20" height="20">
-      <span class="related-label">運営</span>
-      <span class="related-sub">About</span>
-    </a>-->
-    <a href="contact.html" class="related-btn">
-      <img class="related-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzhhODRiIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICA8cmVjdCB4PSIyIiB5PSI1IiB3aWR0aD0iMjAiIGhlaWdodD0iMTQiIHJ4PSIxLjUiLz4KICA8cG9seWxpbmUgcG9pbnRzPSIzLjUsNiAxMiwxMyAyMC41LDYiLz4KPC9zdmc+" alt="" width="20" height="20">
-      <span class="related-label">お問い合わせ</span>
-      <span class="related-sub">Contact</span>
-    </a>
-    <a href="https://x.com/BlueHat1103" target="_blank" rel="noopener" class="related-btn">
-      <img class="related-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzhhODRiIiBzdHJva2Utd2lkdGg9IjEuOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICA8bGluZSB4MT0iNSIgeTE9IjUiIHgyPSIxOSIgeTI9IjE5Ii8+CiAgPGxpbmUgeDE9IjE5IiB5MT0iNSIgeDI9IjUiIHkyPSIxOSIvPgo8L3N2Zz4=" alt="" width="20" height="20">
-      <span class="related-label">公式X</span>
-      <span class="related-sub">@JugglingNext</span>
-    </a>
-  </div>
-  <a href="index.html" class="home-link">← HOME に戻る</a>
-</section>
-<!-- ========== FOOTER ========== -->
-<footer>
+
+<!-- ===================== エントリー方法 ===================== -->
+<section id="method">
   <div class="container">
-    <p class="footer-logo">第2回 Juggling Next</p>
-    <p class="footer-sub">2026.08.22 — 名古屋市南文化小劇場</p>
-    <div class="footer-links">
-      <a href="index.html">HOME</a>
+    <div class="sec-head reveal"><h2>エントリー方法</h2></div>
+    <ul class="rlist reveal">
+      <li>専用フォームにてエントリーを受け付けます。</li>
+    </ul>
+    <!--<div class="reveal">
+      <div class="ctas">
+        <a href="https://forms.gle/NYh4pVaoZzmnYkBr7" target="_blank" rel="noopener" class="cta solid">エントリーはコチラ →
+        </a>
+      </div>-->
+<div class="reveal">
+  <div class="ctas">
+    <span class="cta is-disabled" aria-disabled="true">エントリー受付は終了しました</span>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== エントリー料 ===================== -->
+<section class="alt" id="fee">
+  <div class="container">
+    <div class="sec-head reveal"><h2>エントリー料</h2></div>
+    <div class="fee-grid reveal">
+      <div class="fee-item"><span class="fee-div">高校生以下</span><span class="fee-price">¥3,000</span></div>
+      <div class="fee-item"><span class="fee-div">大学生</span><span class="fee-price">¥4,000</span></div>
+      <div class="fee-item"><span class="fee-div">一般</span><span class="fee-price">¥5,000</span></div>
+      <div class="fee-item"><span class="fee-div">チーム</span><span class="fee-price">¥5,000</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== エントリー受付期間 ===================== -->
+<section id="period">
+  <div class="container">
+    <div class="sec-head reveal"><h2>エントリー受付期間</h2></div>
+    <div class="callout reveal">
+      <strong style="display:block;color:var(--ink);font-size:16px;letter-spacing:.06em;margin-bottom:6px;">2026年8月29日（土）21:00 〜 9月6日（日）23:59</strong>
+      エントリーは<strong style="color:var(--accent-d);">先着順</strong>となります。定員に達した部門から、随時エントリーを締め切ります。
+    </div>
+    <!--<ul class="rlist reveal" style="margin-top:18px;">
+      <li>受付開始は <a href="#" target="_blank" rel="noopener" style="color:var(--accent-d);">公式X</a> でもお知らせします。</li>
+      <li>定員に達した部門は、期間内であってもエントリーを締め切る場合があります。お早めにエントリーください。</li>
+    </ul>-->
+    <!--<div class="reveal">
+      <div class="ctas">
+                <a href="https://forms.gle/NYh4pVaoZzmnYkBr7" target="_blank" rel="noopener" class="cta solid">エントリーはコチラ →
+        </a>
+      </div>-->
+      <div class="reveal">
+  <div class="ctas">
+    <span class="cta is-disabled" aria-disabled="true">エントリー受付は終了しました</span>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== その他のページ ===================== -->
+<section class="related" style="padding-bottom:clamp(56px,8vw,96px);">
+  <div class="container">
+    <div class="sec-head reveal"><h2>その他のページ</h2></div>
+    <div class="rel-grid reveal">
+      <a href="rule.html"    class="rel-btn"><span class="rel-sub">Rules</span><span class="rel-label">開催部門・ルール</span></a>
+      <!--<a href="sponsor.html" class="rel-btn"><span class="rel-sub">Sponsor</span><span class="rel-label">ご協賛・カンパ</span></a>-->
+      <a href="schedule.html" class="rel-btn"><span class="rel-sub">Schedule</span><span class="rel-label">スケジュール</span></a>
+      <a href="player.html"  class="rel-btn"><span class="rel-sub">Player</span><span class="rel-label">演技順</span></a>
+      <a href="access.html"  class="rel-btn"><span class="rel-sub">Access</span><span class="rel-label">アクセス</span></a>
+      <a href="contact.html" class="rel-btn"><span class="rel-sub">Contact</span><span class="rel-label">お問い合わせ</span></a>
+      <a href="https://x.com/wataikai_ring" target="_blank" rel="noopener" class="rel-btn"><span class="rel-sub">X</span><span class="rel-label">公式X</span></a>
+    </div>
+    <a href="index.html" class="home-link reveal">← トップに戻る</a>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer id="contact">
+  <div class="container">
+    <div class="foot-name">輪大会2026</div>
+    <div class="foot-sub">2026.11.28 — 西成区民センター</div>
+    <nav class="foot-links">
+      <a href="index.html#about">大会概要</a>
+      <a href="index.html#whats">大会テーマ</a>
       <a href="rule.html">開催部門・ルール</a>
       <a href="entry.html">出場エントリー</a>
-      <!--<a href="timetable.html">当日スケジュール</a>-->
-      <!--<a href="sponsor.html">ご協賛</a>-->
+      <!--<a href="sponsor.html">ご協賛・カンパ</a>-->
+      <a href="schedule.html">スケジュール</a>
+      <a href="player.html">演技順</a>
       <a href="access.html">アクセス</a>
-      <!--<a href="about.html">運営</a>-->
       <a href="contact.html">お問い合わせ</a>
-      <a href="https://x.com/JugglingNext" target="_blank" rel="noopener">公式X</a>
-    </div>
-    <p class="copyright">© 2026 第2回 Juggling Next　主催：BlueHat</p>
+      <a href="https://x.com/wataikai_ring" target="_blank" rel="noopener">公式X</a>
+    </nav>
+    <div class="copy">© 輪大会2026</div>
   </div>
 </footer>
+
 <script>
-/* ── ハンバーガー / ドロワー ── */
-const btn    = document.getElementById('hamburger');
-const drawer = document.getElementById('drawer');
-
-function toggleDrawer(forceClose) {
-  const open = forceClose ? false : !drawer.classList.contains('open');
-  drawer.classList.toggle('open', open);
-  btn.classList.toggle('open', open);
-  btn.setAttribute('aria-expanded', open);
-  drawer.setAttribute('aria-hidden', !open);
-}
-
-btn.addEventListener('click', e => { e.stopPropagation(); toggleDrawer(); });
-
-drawer.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => toggleDrawer(true));
-});
-
-document.addEventListener('click', e => {
-  if (drawer.classList.contains('open') &&
-      !drawer.contains(e.target) && !btn.contains(e.target)) {
-    toggleDrawer(true);
-  }
-});
-
-/* ── スクロールフェードイン ── */
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.06 });
-document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+const header = document.getElementById('header');
+addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 10));
+const burger = document.getElementById('burger');
+const menu = document.getElementById('menu');
+burger.addEventListener('click', () => { burger.classList.toggle('open'); menu.classList.toggle('open'); });
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { burger.classList.remove('open'); menu.classList.remove('open'); }));
+const io = new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
