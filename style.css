@@ -444,3 +444,69 @@ body.no-scroll{ overflow:hidden; }
 .order-sheet a{ display:block; cursor:zoom-in; }
 .order-sheet img{ display:block; width:100%; height:auto; }
 .order-sheet + .note{ margin-top:18px; }
+
+/* =========================================================
+   トップページ追加分 その6（index.html：ヒーローの当日案内ボタン）
+   ※ 新規クラス .hero-quick と、ヒーローに付けた .has-quick で範囲を限定。
+     .has-quick を外せば従来のヒーロー表示に戻る（既存セレクタは直接変更しない）。
+   ※ ねらい：スマホでもスクロールせずに3ボタンまで見えること。
+     ロゴの大きさを画面の高さ（svh）でも制限し、縦が短い画面では自動で小さくする。
+   ========================================================= */
+
+/* ---------- ヒーローの詰め（ボタンを入れる分の高さを確保） ---------- */
+.hero.has-quick .hero-logo{ margin-bottom:10px; }
+.hero.has-quick .hero-logo img{ width:clamp(150px, min(40vw, 40svh), 430px); }
+.hero.has-quick .hero-meta{ margin:26px auto 30px; }
+
+/* ---------- 当日案内ボタン（3つ横並び） ---------- */
+.hero-quick{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:12px;
+  max-width:520px; margin:0 auto;   /* 日時・場所の表と同じ幅にそろえる */
+  opacity:0; animation:fade 1s .65s forwards;
+}
+.hero-quick a{
+  position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px;
+  padding:18px 10px 16px; background:var(--card); border:1px solid var(--line);
+  text-align:center; line-height:1.4;
+  transition:border-color .3s, transform .3s, background .3s;
+}
+.hero-quick a:hover{ border-color:var(--accent); transform:translateY(-2px); }
+.hero-quick .hq-sub{ font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--accent-d); }
+.hero-quick .hq-label{ font-size:15px; font-weight:500; letter-spacing:.06em; white-space:nowrap; }
+
+/* ---------- スマホ：1画面に収める ---------- */
+@media (max-width:860px){
+  .hero.has-quick .hero-logo{ gap:0; }
+  .hero.has-quick .hero-logo img{ width:clamp(130px, min(46vw, 30svh), 260px); }
+  .hero.has-quick .hero-logo .yr{ font-size:20px; line-height:1.2; }
+}
+@media (max-width:480px){
+  .hero.has-quick{ min-height:100svh; padding-bottom:16px; }   /* 縦中央に置き、下端にボタンが来るように */
+  .hero.has-quick .hero-meta{ margin:16px auto 20px; }
+  .hero.has-quick .hero-meta .row{ gap:18px; padding:11px 0; }
+  .hero.has-quick .hero-meta .k{ width:48px; }
+  .hero.has-quick .hero-meta .v{ font-size:15px; }
+  .hero-quick{ gap:8px; }
+  .hero-quick a{ padding:14px 4px 12px; }
+  .hero-quick .hq-label{ font-size:13.5px; letter-spacing:.02em; }
+  .hero-quick .hq-sub{ font-size:9px; letter-spacing:.12em; }
+}
+
+/* =========================================================
+   個別ページ追加分 その6（sponsor.html：協賛プラン）
+   ※ 新規クラスのみ。既存セレクタは上書きしない。
+   ========================================================= */
+
+/* ---------- 協賛プラン：カード2枚＋カード内ボタン ---------- */
+/* カードを縦並びのflexにして、ボタンを下端にそろえる（特典の行数が違っても高さがそろう） */
+.plan-grid .div-card{ display:flex; flex-direction:column; padding-bottom:26px; }
+.plan-grid .dmeta{ margin-bottom:26px; }
+.cta.stack.plan-cta{ margin-top:auto; width:100%; min-width:0; padding-inline:16px; }
+
+/* 折り返し位置の調整：<span class="nw"> で囲んだ語句は途中で改行しない（幅が足りないときは語句の切れ目で改行） */
+.plan-grid .mv .nw{ display:inline-block; }
+
+/* 760px以上は2列（.div-grid の3列指定より後に書くので、こちらが優先される） */
+@media (min-width:760px){
+  .div-grid.plan-grid{ grid-template-columns:repeat(2,1fr); }
+}
