@@ -299,8 +299,7 @@ footer{ padding:clamp(64px,9vw,104px) 0 48px; border-top:1px solid var(--line); 
   display:flex; align-items:center; justify-content:center; font-size:11px; letter-spacing:.08em; color:var(--ink-soft); }
 .sponsor-info{ flex:1; }
 .sponsor-name{ font-size:18px; font-weight:500; letter-spacing:.06em; color:var(--ink); margin-bottom:10px; }
-.sponsor-desc{ font-size:14px; color:var(--ink-soft); letter-spacing:.04em; line-height:1.9; }
-
+.sponsor-desc{ font-size:15px; color:#3D3A34; letter-spacing:.04em; line-height:1.9; text-align:left; }
 /* 600px以上で横並び（左: ロゴ200px / 右: テキスト） */
 @media (min-width:600px){
   .sponsor-item{ flex-direction:row; align-items:flex-start; text-align:left; gap:28px; }
@@ -308,11 +307,10 @@ footer{ padding:clamp(64px,9vw,104px) 0 48px; border-top:1px solid var(--line); 
 }
 
 /* ---------- ご協賛：カンパ者名簿（テキストで「／」区切り） ---------- */
-.name-list{ margin-top:32px; border-top:1px solid var(--line); padding-top:26px; text-align:center; }
-.name-list-label{ font-family:var(--mono); font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--accent-d); margin-bottom:16px; }
-.name-items{ list-style:none; display:flex; flex-wrap:wrap; justify-content:center; gap:0; }
-.name-items li{ font-size:15px; letter-spacing:.04em; color:var(--ink); }
-.name-items li + li::before{ content:"／"; margin:0 12px; color:var(--accent-d); opacity:.5; }
+.name-list{ margin-top:32px; text-align:center; }
+.name-list-label{ font-size:21px; font-weight:500; letter-spacing:.12em; color:#1F5A4C; margin-bottom:18px; }
+.name-items{ list-style:none; }
+.name-items li{ font-size:18px; font-weight:500; letter-spacing:.06em; line-height:2.2; color:var(--ink); }
 
 /* ---------- お問い合わせ ---------- */
 .contact-box{ background:var(--card); border:1px solid var(--line); padding:clamp(28px,5vw,44px); text-align:center; }
